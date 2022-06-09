@@ -14,11 +14,11 @@ public class EnableGrabbingWhenCollided : MonoBehaviour
     {
         print("Entered:"+col.name);
 
-        if(col.name == "LeftHand Base Controller")
+        if(col.name == "LeftHand UI Controller")
         {
             UIInteractionControllerSwitcherLeftHand.EnableGrab();
         }
-        else if(col.name == "RightHand Base Controller")
+        else if(col.name == "RightHand UI Controller")
         {
             UIInteractionControllerSwitcherRighttHand.EnableGrab();
         }

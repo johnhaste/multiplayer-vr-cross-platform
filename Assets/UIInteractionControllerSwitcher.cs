@@ -14,13 +14,20 @@ public class UIInteractionControllerSwitcher : MonoBehaviour
     [SerializeField]
     GameObject BaseController;
 
+    void Start()
+    {
+        ActivateUIMode();
+    }
+
     public void DisableGrab()
     {
+        print("Disable Grab");
         ActivateUIMode();
     }
 
     public void EnableGrab()
     {
+        print("Enable Grab");
         DeactivateUIMode();
     }   
 
