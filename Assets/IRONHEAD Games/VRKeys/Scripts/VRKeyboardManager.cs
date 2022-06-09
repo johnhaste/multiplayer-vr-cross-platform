@@ -39,7 +39,6 @@ public class VRKeyboardManager : MonoBehaviour
 	public void EnableVRKeyboard()
 	{		
 		
-
 		if(CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsEditor &&
 		   CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsPlayer)
 		{

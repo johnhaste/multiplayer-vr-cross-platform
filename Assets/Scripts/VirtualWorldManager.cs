@@ -40,7 +40,7 @@ public class VirtualWorldManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         //Alerts when a new player entered the room
-        print(newPlayer.NickName +" joined the room. Player count: " + PhotonNetwork.CurrentRoom.PlayerCount);
+        print(newPlayer.NickName +" joined the room. Using:" + CurrentPlatformManager.instance.currentPlatform + ". Player count: " + PhotonNetwork.CurrentRoom.PlayerCount);
     }
     
     #endregion
