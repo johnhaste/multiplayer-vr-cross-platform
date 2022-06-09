@@ -29,6 +29,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public TextMeshProUGUI OccupancyRateText_ForSchool;
     public TextMeshProUGUI OccupancyRateText_ForOutdoor;
 
+    public UI_OpenWorldsManager uI_OpenWorldsManager;
+
     void Start()
     {
         //Syncs scene to each player
@@ -78,6 +80,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         print("Connected to servers again");
+        uI_OpenWorldsManager.displayButtons();
         PhotonNetwork.JoinLobby();
     }
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3353666616870502089}
   - component: {fileID: 3353666616870502088}
   - component: {fileID: 3353666616870502135}
+  - component: {fileID: 5418822065086375297}
   m_Layer: 0
   m_Name: UI_OpenWorlds
   m_TagString: Untagged
@@ -124,6 +125,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483647
   m_RaycastTriggerInteraction: 1
+--- !u!114 &5418822065086375297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353666616870502134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d8b4dd5901e4b46bb72ea61c795ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonEnter: {fileID: 3353666617230840614}
 --- !u!1 &3353666616921926521
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3353666617230840613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1629,7 +1643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3353666618151478680
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1450,6 +1450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XROrigin: {fileID: 1635931451}
   UI: {fileID: 127475239}
+  simulateOnQuest: 0
 --- !u!1 &967311180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,6 +2259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OccupancyRateText_ForSchool: {fileID: 1965265310}
   OccupancyRateText_ForOutdoor: {fileID: 1965265309}
+  uI_OpenWorldsManager: {fileID: 1411504683}
 --- !u!4 &1267740648
 Transform:
   m_ObjectHideFlags: 0
@@ -2539,6 +2541,17 @@ MonoBehaviour:
   - {fileID: 1565914496}
   avatarSelectionNumber: 0
   avatarInputConverter: {fileID: 1635931454}
+--- !u!114 &1411504683 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5418822065086375297, guid: 379aea1ba0861ab4d9fb240d15a5e6bc, type: 3}
+  m_PrefabInstance: {fileID: 1965265307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d8b4dd5901e4b46bb72ea61c795ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1475946613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3109631380473908606, guid: b787c76c5e9f27d49b0358e843b9edb8, type: 3}

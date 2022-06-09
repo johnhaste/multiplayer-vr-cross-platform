@@ -541,8 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  gravity: -3
-  PCCamera: {fileID: 8518650641200913992}
 --- !u!1 &1190563591403755417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,8 +2623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb52165361b8ef4ea3498b1a5e3b5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travarMouse: 1
-  sensibilidade: 2
+  lockMouse: 1
+  sensitivity: 2
 --- !u!1 &8632053295305658006
 GameObject:
   m_ObjectHideFlags: 0
