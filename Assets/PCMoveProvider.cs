@@ -5,53 +5,24 @@ using UnityEngine;
 public class PCMoveProvider : MonoBehaviour
 {
     public float speed = 3;
-    public float gravity = -3;
  
-    float velocityY = 0; 
-
-    public GameObject PCCamera;
-
-    CharacterController controller;
-
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-    }
-
     void Update()
     {
-        velocityY += gravity * Time.deltaTime;
-
-        Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        input = input.normalized;
-
-        Vector3 temp = Vector3.zero;
-        if (input.z == 1)
-        {
-            temp += transform.forward;
+        Vector3 v3 = new Vector3(0f,0f,0f);
+     
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {  
+            v3 += Vector3.forward;  
+        }  
+        if(Input.GetKey(KeyCode.S)||Input.GetKey(KeyCode.DownArrow)) {  
+            v3 += Vector3.back;  
         }
-        else if (input.z == -1)
-        {
-            temp += transform.forward * -1;
-        }
-
-        if (input.x == 1)
-        {
-            temp += transform.right;
-        }
-        else if (input.x == -1)
-        {
-            temp += transform.right * -1;
-        }
-
-        Vector3 velocity = temp * speed;
-        velocity.y = velocityY;
+        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {  
+            v3 += Vector3.left;  
+        }    
+        else if(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {    
+            v3 += Vector3.right; 
+        }  
         
-        controller.Move(velocity * Time.deltaTime);
-
-        if (controller.isGrounded)
-        {
-            velocityY = 0;
-        }
+        transform.Translate(speed * v3.normalized * Time.deltaTime);    
     }
 }
