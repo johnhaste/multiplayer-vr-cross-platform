@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XROrigin: {fileID: 0}
   UI: {fileID: 0}
+  simulateOnQuest: 0
 --- !u!1 &63433599
 GameObject:
   m_ObjectHideFlags: 0

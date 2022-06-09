@@ -14,10 +14,20 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject AvatarHeadGameObject;
     public GameObject AvatarBodyGameObject;
     public GameObject AvatarFullBody;
+    
+    public GameObject CameraOffset;
 
     public GameObject[] AvatarModelPrefabs;
 
     public TextMeshProUGUI PlayerNameText;
+
+    void Update()
+    {
+        if(!CurrentPlatformManager.instance.IsOnQuest())
+        {
+            LocalXRRigGameobject.transform.rotation =  Quaternion.Euler(0f,CameraOffset.transform.eulerAngles.y,0f);
+        }
+    }
 
     // When the player is spawned
     void Start()
@@ -36,6 +46,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 //Add PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
                 LocalXRRigGameobject.AddComponent<PCMoveProvider>();
+                CameraOffset.transform.position = new Vector3(0f,1f,0f);                
             }
 
             //If the player is local

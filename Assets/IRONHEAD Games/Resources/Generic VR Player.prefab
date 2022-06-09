@@ -540,8 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7da06221990e145b88dd467a32b65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  gravity: -5
+  speed: 3
+  gravity: -3
+  PCCamera: {fileID: 8518650641200913992}
 --- !u!1 &1190563591403755417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,6 +2246,7 @@ MonoBehaviour:
   AvatarHeadGameObject: {fileID: 4559582377377039004}
   AvatarBodyGameObject: {fileID: 1738184810247023603}
   AvatarFullBody: {fileID: 2211914141201632862}
+  CameraOffset: {fileID: 8518650641200913992}
   AvatarModelPrefabs:
   - {fileID: 6698639957168452362, guid: 69edaa7f6d0367845b76420b47e4be35, type: 3}
   - {fileID: 1974154923505330770, guid: 0c74eca2d21234b42b00d95293f1ee7e, type: 3}
@@ -2585,6 +2587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4033721784319040074}
+  - component: {fileID: 6329852594707945138}
   m_Layer: 0
   m_Name: Camera Offset
   m_TagString: Untagged
@@ -2610,6 +2613,20 @@ Transform:
   m_Father: {fileID: 8664124426864330372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6329852594707945138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518650641200913992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eb52165361b8ef4ea3498b1a5e3b5fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  travarMouse: 1
+  sensibilidade: 2
 --- !u!1 &8632053295305658006
 GameObject:
   m_ObjectHideFlags: 0
