@@ -38,18 +38,24 @@ public class VRKeyboardManager : MonoBehaviour
 	/// </summary>
 	public void EnableVRKeyboard()
 	{		
-		keyboard.Enable();
-		keyboard.SetPlaceholderMessage("What should we call you?");
+		
 
-		keyboard.OnUpdate.AddListener(HandleUpdate);
-		keyboard.OnSubmit.AddListener(HandleSubmit);
-		keyboard.OnCancel.AddListener(HandleCancel);
+		if(CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsEditor &&
+		   CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsPlayer)
+		{
+			keyboard.Enable();
+			keyboard.SetPlaceholderMessage("What should we call you?");
 
-		keyboard.gameObject.transform.position = localVRPlayerCamera.transform.position + relativePosition;
-		AttachMarrets();
+			keyboard.OnUpdate.AddListener(HandleUpdate);
+			keyboard.OnSubmit.AddListener(HandleSubmit);
+			keyboard.OnCancel.AddListener(HandleCancel);
 
-		leftBaseController.GetComponent<XRRayInteractor>().enabled = false;
-		rightBaseController.GetComponent<XRRayInteractor>().enabled = false;
+			keyboard.gameObject.transform.position = localVRPlayerCamera.transform.position + relativePosition;
+			AttachMarrets();
+
+			leftBaseController.GetComponent<XRRayInteractor>().enabled = false;
+			rightBaseController.GetComponent<XRRayInteractor>().enabled = false;
+		}
 
 	}
 
