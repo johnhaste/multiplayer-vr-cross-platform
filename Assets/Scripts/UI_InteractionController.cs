@@ -38,7 +38,7 @@ public class UI_InteractionController : MonoBehaviour
     private void Start()
     {
         //Deactivating UI Canvas Gameobject by default
-        UIGameobjects.SetActive(false);
+        //UIGameobjects.SetActive(false);
 
         //Deactivating UI Controller by default
         UIController.GetComponent<XRRayInteractor>().enabled = false;

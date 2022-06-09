@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd1ef9a0b7f99f4e89241ab42906019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alwaysShowKeyboard: 1
+  alwaysShowKeyboard: 0
   keyboard: {fileID: 114000011308395004}
   localVRPlayerCamera: {fileID: 613240828}
   relativePosition: {x: 0, y: 0, z: 1.75}
@@ -1362,6 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlatform: 0
+  simulateOnQuest: 0
 --- !u!1 &2125111097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,7 +6617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &3109631379336194634
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6770,6 +6771,10 @@ PrefabInstance:
     - target: {fileID: 6295435757749577308, guid: 2c4e9c524094421489b62d4bae1df867, type: 3}
       propertyPath: m_Name
       value: XR Origin With Switcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295435757749577308, guid: 2c4e9c524094421489b62d4bae1df867, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6295435757749577309, guid: 2c4e9c524094421489b62d4bae1df867, type: 3}
       propertyPath: m_RootOrder

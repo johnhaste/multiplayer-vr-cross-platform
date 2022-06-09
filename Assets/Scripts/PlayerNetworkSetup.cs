@@ -10,20 +10,34 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
 
     public GameObject LocalXRRigGameobject;
     public GameObject MainAvatarGameObject;
-
-
+    
     public GameObject AvatarHeadGameObject;
     public GameObject AvatarBodyGameObject;
+    public GameObject AvatarFullBody;
 
     public GameObject[] AvatarModelPrefabs;
 
     public TextMeshProUGUI PlayerNameText;
 
-    // Start is called before the first frame update
+    // When the player is spawned
     void Start()
     {
         if(photonView.IsMine)
         {
+            
+            //Check if it's on PC or Quest
+            if(!CurrentPlatformManager.instance.IsOnQuest()){
+
+                //Remove VR Components
+                LocalXRRigGameobject.GetComponent<AvatarInputConverter>().enabled = false;
+                LocalXRRigGameobject.GetComponent<LocomotionSystem>().enabled = false;
+                LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
+
+                //Add PC Components
+                AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
+                LocalXRRigGameobject.AddComponent<PCMoveProvider>();
+            }
+
             //If the player is local
             LocalXRRigGameobject.SetActive(true);
 
@@ -77,6 +91,16 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         foreach (Transform trans in go.GetComponentsInChildren<Transform>(true))
         {
             trans.gameObject.layer = layerNumber;
+        }
+    }
+
+    GameObject GetChildWithName(GameObject obj, string name) {
+        Transform trans = obj.transform;
+        Transform childTrans = trans. Find(name);
+        if (childTrans != null) {
+            return childTrans.gameObject;
+        } else {
+            return null;
         }
     }
 

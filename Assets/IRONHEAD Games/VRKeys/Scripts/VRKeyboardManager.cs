@@ -17,7 +17,6 @@ public class VRKeyboardManager : MonoBehaviour
 	public bool alwaysShowKeyboard;
 	public Keyboard keyboard;
 
-
 	public GameObject localVRPlayerCamera;
 
 
@@ -40,9 +39,7 @@ public class VRKeyboardManager : MonoBehaviour
 	public void EnableVRKeyboard()
 	{		
 		
-		if((CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsEditor &&
-		    CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsPlayer) ||
-		    alwaysShowKeyboard == true)
+		if(CurrentPlatformManager.instance.IsOnQuest())
 		{
 			keyboard.Enable();
 			keyboard.SetPlaceholderMessage("What should we call you?");
