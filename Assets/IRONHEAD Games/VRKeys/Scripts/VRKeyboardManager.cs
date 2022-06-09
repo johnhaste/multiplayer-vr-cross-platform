@@ -14,6 +14,7 @@ public class VRKeyboardManager : MonoBehaviour
 	/// <summary>
 	/// Reference to the VRKeys keyboard.
 	/// </summary>
+	public bool alwaysShowKeyboard;
 	public Keyboard keyboard;
 
 
@@ -39,8 +40,9 @@ public class VRKeyboardManager : MonoBehaviour
 	public void EnableVRKeyboard()
 	{		
 		
-		if(CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsEditor &&
-		   CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsPlayer)
+		if((CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsEditor &&
+		    CurrentPlatformManager.instance.currentPlatform != RuntimePlatform.WindowsPlayer) ||
+		    alwaysShowKeyboard == true)
 		{
 			keyboard.Enable();
 			keyboard.SetPlaceholderMessage("What should we call you?");

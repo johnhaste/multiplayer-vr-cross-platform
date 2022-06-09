@@ -23,6 +23,7 @@ public class CurrentPlatformManager : MonoBehaviour
     {
         //Gets the current platform
         currentPlatform = Application.platform;
+        print("CurrentPlatform:" + currentPlatform);
     }
 
 }
