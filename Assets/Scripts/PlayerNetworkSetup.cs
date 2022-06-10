@@ -14,6 +14,10 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject AvatarHeadGameObject;
     public GameObject AvatarBodyGameObject;
     public GameObject AvatarFullBody;
+
+    //Scripts for PC
+    public PCMoveProvider pCMoveProvider;
+    public CameraMouseMovement cameraMouseMovement;
     
     public GameObject CameraOffset;
 
@@ -43,10 +47,11 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.GetComponent<LocomotionSystem>().enabled = false;
                 LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
 
-                //Add PC Components
+                //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
-                LocalXRRigGameobject.AddComponent<PCMoveProvider>();
-                CameraOffset.transform.position = new Vector3(0f,1f,0f);                
+                CameraOffset.transform.position = new Vector3(0f,1f,0f);     
+                pCMoveProvider.enabled = true;       
+                cameraMouseMovement.enabled = true;    
             }
 
             //If the player is local

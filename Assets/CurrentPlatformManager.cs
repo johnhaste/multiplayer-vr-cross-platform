@@ -7,7 +7,7 @@ public class CurrentPlatformManager : MonoBehaviour
     public static CurrentPlatformManager instance;
     public RuntimePlatform currentPlatform;
 
-    private bool simulateOnQuest = false;
+    private bool simulateOnQuest = true;
 
     //Singleton
     private void Awake(){
