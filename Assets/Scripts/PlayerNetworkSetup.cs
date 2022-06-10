@@ -53,8 +53,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
 
                 //Adjust Player Hands
-                AvatarLeftHandGameObject.transform.position = new Vector3(-0.3f, 0.6f, 0.3f);
-                AvatarRightHandGameObject.transform.position = new Vector3( 0.3f, 0.6f, 0.3f);
+                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.3f, 0.8f, 0.3f);
+                AvatarRightHandGameObject.transform.position = new Vector3( 0.3f, 0.8f, 0.3f);
 
                 //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
@@ -116,16 +116,6 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         foreach (Transform trans in go.GetComponentsInChildren<Transform>(true))
         {
             trans.gameObject.layer = layerNumber;
-        }
-    }
-
-    GameObject GetChildWithName(GameObject obj, string name) {
-        Transform trans = obj.transform;
-        Transform childTrans = trans. Find(name);
-        if (childTrans != null) {
-            return childTrans.gameObject;
-        } else {
-            return null;
         }
     }
 
