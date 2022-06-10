@@ -7,7 +7,10 @@ public class CurrentPlatformManager : MonoBehaviour
     public static CurrentPlatformManager instance;
     public RuntimePlatform currentPlatform;
 
-    private bool simulateOnQuest = true;
+    //TRUE  => To simulate quest being used on editor
+    //FALSE => To simulate player on computer
+    //If serializes field it doesn't work for some reason
+    private bool simulateOnQuest = false;
 
     //Singleton
     private void Awake(){
@@ -28,9 +31,6 @@ public class CurrentPlatformManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Gets the current platform
-        //currentPlatform = Application.platform;
-        //print("CurrentPlatform:" + currentPlatform);
         print("Is on quest?" + IsOnQuest());
     }
 
@@ -46,7 +46,8 @@ public class CurrentPlatformManager : MonoBehaviour
         if(GetCurrentPlatform() == RuntimePlatform.WindowsEditor || GetCurrentPlatform() == RuntimePlatform.WindowsPlayer)
         {
             return false;
-        }else
+        }
+        else
         {
             return true;
         }

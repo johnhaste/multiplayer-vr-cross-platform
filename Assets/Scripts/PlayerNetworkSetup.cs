@@ -8,21 +8,26 @@ using TMPro;
 public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
 {
 
+    //XR Rig
     public GameObject LocalXRRigGameobject;
-    public GameObject MainAvatarGameObject;
     
+    //Avatar Body Parts
+    public GameObject MainAvatarGameObject;
     public GameObject AvatarHeadGameObject;
     public GameObject AvatarBodyGameObject;
+    public GameObject AvatarLeftHandGameObject;
+    public GameObject AvatarRightHandGameObject;
     public GameObject AvatarFullBody;
+    public GameObject[] AvatarModelPrefabs;
 
     //Scripts for PC
     public PCMoveProvider pCMoveProvider;
     public CameraMouseMovement cameraMouseMovement;
     
+    //Camera
     public GameObject CameraOffset;
 
-    public GameObject[] AvatarModelPrefabs;
-
+    //UI
     public TextMeshProUGUI PlayerNameText;
 
     void Update()
@@ -46,6 +51,10 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.GetComponent<AvatarInputConverter>().enabled = false;
                 LocalXRRigGameobject.GetComponent<LocomotionSystem>().enabled = false;
                 LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
+
+                //Adjust Player Hands
+                AvatarLeftHandGameObject.transform.position = new Vector3(-0.3f, 0.6f, 0.3f);
+                AvatarRightHandGameObject.transform.position = new Vector3( 0.3f, 0.6f, 0.3f);
 
                 //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
