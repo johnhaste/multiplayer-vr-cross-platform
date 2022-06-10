@@ -23,6 +23,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     //Scripts for PC
     public PCMoveProvider pCMoveProvider;
     public CameraMouseMovement cameraMouseMovement;
+    public GameObject grabObjectsDetector;
     
     //Camera
     public GameObject CameraOffset;
@@ -60,7 +61,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
                 CameraOffset.transform.position = new Vector3(0f,1f,0f);     
                 pCMoveProvider.enabled = true;       
-                cameraMouseMovement.enabled = true;    
+                cameraMouseMovement.enabled = true; 
+                grabObjectsDetector.SetActive(true);   
             }
 
             //If the player is local
