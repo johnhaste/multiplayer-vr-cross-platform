@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class FollowObject : MonoBehaviour
 {
-    public Transform targetPosition;
-    public GameObject  player;
+    private Transform targetPosition;
+    public GameObject targetObject;
     public float speed = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetObject = GameObject.Find("InitialTarget");
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetPosition = player.GetComponent<Transform>();
+        targetPosition = targetObject.GetComponent<Transform>();
 
         transform.LookAt(targetPosition);
      
@@ -25,12 +25,17 @@ public class FollowPlayer : MonoBehaviour
         
             transform.position += transform.forward*speed*Time.deltaTime;
         }
-        
+
         /*    
         if(Vector3.Distance(transform.position,Player.position) <= MaxDist)
         {
             //Here Call any function U want Like Shoot at here or something
         } 
         */
+    }
+
+    public void ChangeTarget(GameObject newTarget)
+    {
+        targetObject = newTarget;
     }
 }
