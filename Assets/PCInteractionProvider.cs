@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PCMoveProvider : MonoBehaviour
+public class PCInteractionProvider : MonoBehaviour
 {
-    public float speed = 3;
+    public float speed = 3f;
+    public GameObject weaponAttached;
  
     void Update()
     {
+        
+        //MOUSE INPUT
+        //Shoot Bullet
+        if(Input.GetMouseButtonDown(0) && weaponAttached != null)
+        {
+            weaponAttached.gameObject.transform.GetChild(0).GetComponent<Gun>().ShootBullet();
+        }
+
+        //MOVEMENT INPUT WASD OR ARROW KEYS
         Vector3 v3 = new Vector3(0f,0f,0f);
      
         if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {  
@@ -24,5 +34,10 @@ public class PCMoveProvider : MonoBehaviour
         }  
         
         transform.Translate(speed * v3.normalized * Time.deltaTime);    
+    }
+
+    public void AttachWeapon(GameObject weapon)
+    {
+        weaponAttached = weapon;
     }
 }

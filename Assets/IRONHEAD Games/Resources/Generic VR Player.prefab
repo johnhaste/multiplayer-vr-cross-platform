@@ -544,6 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  weaponAttached: {fileID: 0}
 --- !u!54 &282488319
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1773,6 +1774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHand: {fileID: 91163736432123199}
+  pCInteractionProvider: {fileID: 610339812185651037}
 --- !u!65 &8547885362323755043
 BoxCollider:
   m_ObjectHideFlags: 0

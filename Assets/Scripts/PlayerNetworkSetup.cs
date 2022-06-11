@@ -21,7 +21,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject[] AvatarModelPrefabs;
 
     //Scripts for PC
-    public PCMoveProvider pCMoveProvider;
+    public PCInteractionProvider pCMoveProvider;
     public CameraMouseMovement cameraMouseMovement;
     public GameObject grabObjectsDetector;
     
