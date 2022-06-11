@@ -2721,8 +2721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb52165361b8ef4ea3498b1a5e3b5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockMouse: 1
+  lockMouse: 0
   sensitivity: 2
+  rightHand: {fileID: 91163736432123199}
 --- !u!1 &8632053295305658006
 GameObject:
   m_ObjectHideFlags: 0
