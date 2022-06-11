@@ -7,17 +7,13 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] spawnerPoint;
     public GameObject zombiePrefab;
     public float timeRate = 5f;
+    public int enemyCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyCounter = 0;
         StartCoroutine(CreateZombies());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private IEnumerator CreateZombies()
@@ -28,6 +24,11 @@ public class EnemySpawner : MonoBehaviour
             GameObject zombie = Instantiate(zombiePrefab, spawnerPoint[indexCurrentSpawner].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
             yield return new WaitForSeconds(timeRate);
         }
+    }
+
+    public void AddOneEnemyCounter()
+    {
+        enemyCounter++;
     }
 
 

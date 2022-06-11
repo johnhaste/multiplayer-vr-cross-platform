@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1096346959507829839
 Transform:
   m_ObjectHideFlags: 0
@@ -1133,6 +1133,8 @@ GameObject:
   - component: {fileID: 2695201861559783920}
   - component: {fileID: 9184930736052253096}
   - component: {fileID: 3436433028594109494}
+  - component: {fileID: 6414593480787309822}
+  - component: {fileID: 2835997237871268514}
   m_Layer: 0
   m_Name: ZombiePrefab
   m_TagString: Untagged
@@ -1234,5 +1236,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca4f3612d9d174d8a2bd2a67d4039d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  rangeOfView: {fileID: 1096346959507829836}
+  animator: {fileID: 6776206754457237479}
+  fieldOfView: {fileID: 1096346959507829836}
+  enemySpawner: {fileID: 0}
+  m_photonView: {fileID: 6414593480787309822}
+--- !u!114 &6414593480787309822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872480779792985637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 2835997237871268514}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &2835997237871268514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872480779792985637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
+  m_UseLocal: 1
