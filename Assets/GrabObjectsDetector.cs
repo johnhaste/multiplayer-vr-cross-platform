@@ -9,6 +9,8 @@ public class GrabObjectsDetector : MonoBehaviour
     private bool isGrabbingGun;
 
     public PCInteractionProvider pCInteractionProvider;
+    public CustomBaseControllerManager customBaseControllerManagerLeft;
+    public CustomBaseControllerManager customBaseControllerManagerRight;
 
     void OnTriggerEnter(Collider col)
     {
@@ -25,10 +27,21 @@ public class GrabObjectsDetector : MonoBehaviour
             //Get the gun properties
             col.gameObject.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         
-            //Attaching the fun to the player
-            pCInteractionProvider.AttachWeapon(col.gameObject);
+
+            if(!CurrentPlatformManager.instance.IsOnQuest())
+            {
+                //Attaching the gun to the player on PC
+                pCInteractionProvider.AttachWeapon(col.gameObject);
+            }
+            else
+            {
+                //Attaching the gun to the player hand
+                customBaseControllerManagerRight.AttachWeapon(col.gameObject);
+            }
+            
         }
 
         print("Trigger: "+col.name);
     }
+    
 }

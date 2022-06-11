@@ -336,9 +336,9 @@ GameObject:
   - component: {fileID: 8143918649226999374}
   - component: {fileID: 5882854881143690594}
   - component: {fileID: 2807127587527016957}
-  - component: {fileID: 8403988260627081272}
   - component: {fileID: 8796353913643989841}
   - component: {fileID: 610339812185651037}
+  - component: {fileID: 8403988260627081272}
   - component: {fileID: 282488319}
   - component: {fileID: 8200423986592361659}
   m_Layer: 10
@@ -500,24 +500,6 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!143 &8403988260627081272
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572058774424983401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.3
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8796353913643989841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +527,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   weaponAttached: {fileID: 0}
+--- !u!143 &8403988260627081272
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572058774424983401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &282488319
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1775,6 +1775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 91163736432123199}
   pCInteractionProvider: {fileID: 610339812185651037}
+  customBaseControllerManagerLeft: {fileID: 0}
+  customBaseControllerManagerRight: {fileID: 3983159295079109506}
 --- !u!65 &8547885362323755043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2578,6 +2580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9008482184332434763}
   - component: {fileID: 3981227723030709941}
+  - component: {fileID: 3983159295079109506}
   m_Layer: 0
   m_Name: Right Hand Parent
   m_TagString: Untagged
@@ -2658,6 +2661,20 @@ MonoBehaviour:
     m_OnExit:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &3983159295079109506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242426068051030305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086417d5a704cf54dbc8d88b63ea1351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionReference_Shoot: {fileID: 3755637697321980868, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  weaponAttached: {fileID: 0}
 --- !u!1 &8518650641200913992
 GameObject:
   m_ObjectHideFlags: 0

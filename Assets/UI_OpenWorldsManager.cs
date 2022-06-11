@@ -7,15 +7,15 @@ using TMPro;
 
 public class UI_OpenWorldsManager : MonoBehaviour
 {
-    public Button buttonEnter;
+    public TextMeshProUGUI buttonEnterText;
 
     void start()
     {
-        buttonEnter.enabled = false;
+        buttonEnterText.text = "Loading";
     }
 
     public void displayButtons()
     {
-        buttonEnter.gameObject.SetActive(true);
+        buttonEnterText.text = "Enter";
     }
 }

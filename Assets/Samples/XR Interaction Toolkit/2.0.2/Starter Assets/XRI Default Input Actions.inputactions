@@ -825,6 +825,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ShootGun",
+                    "type": "Button",
+                    "id": "57dd647d-6895-40ca-81d9-a12b894df2c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1012,6 +1021,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Switch UI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78d9fe44-ceb6-4467-b2c9-a957518614ce",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "ShootGun",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

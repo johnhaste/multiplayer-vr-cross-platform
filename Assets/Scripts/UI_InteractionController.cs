@@ -33,7 +33,6 @@ public class UI_InteractionController : MonoBehaviour
     private void OnDisable()
     {
         inputActionReference_UISwitcher.action.performed -= ActivateUIMode;
-
     }
 
     private void Start()
