@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
 
     //Projectile Properties
     public GameObject projectile;
-    public float projectileSpeed = 200f;
+    public float projectileSpeed = 100f;
 
     public void ShootBullet()
     {

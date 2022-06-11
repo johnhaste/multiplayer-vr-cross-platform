@@ -45,6 +45,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         if(photonView.IsMine)
         {
             
+            transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
+
             //Check if it's on PC or Quest
             if(!CurrentPlatformManager.instance.IsOnQuest()){
 

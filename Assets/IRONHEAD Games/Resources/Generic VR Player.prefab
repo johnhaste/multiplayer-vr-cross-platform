@@ -1775,7 +1775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 91163736432123199}
   pCInteractionProvider: {fileID: 610339812185651037}
-  customBaseControllerManagerLeft: {fileID: 0}
   customBaseControllerManagerRight: {fileID: 3983159295079109506}
 --- !u!65 &8547885362323755043
 BoxCollider:

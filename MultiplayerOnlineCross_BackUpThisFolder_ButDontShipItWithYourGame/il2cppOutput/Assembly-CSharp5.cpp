@@ -37,6 +37,10 @@ struct Func_3_t6F6D9932638EA1A5A45303C6626C818C25D164E5;
 struct List_1_t90832B88D7207769654164CC28440CF594CC397D;
 // UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.ColorTween>
 struct TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4;
+// UnityEngine.Events.UnityEvent`1<System.Object>
+struct UnityEvent_1_t3CE03B42D5873C0C0E0692BEE72E1E6D5399F205;
+// UnityEngine.Events.UnityEvent`1<System.String>
+struct UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257;
 // TMPro.TMP_TextProcessingStack`1<System.Int32>[]
 struct TMP_TextProcessingStack_1U5BU5D_t08293E0BB072311BB96170F351D1083BCA97B9B2;
 // System.Byte[]
@@ -67,6 +71,8 @@ struct LetterKeyU5BU5D_tBD8BD9BF637DB958A7C2EF070431328C3822C39B;
 struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 // TMPro.MaterialReference[]
 struct MaterialReferenceU5BU5D_t7491D335AB3E3E13CE9C0F5E931F396F6A02E1F2;
+// System.Object[]
+struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 // TMPro.RichTextTagAttribute[]
 struct RichTextTagAttributeU5BU5D_t5816316EFD8F59DBC30B9F88E15828C564E47B6D;
 // System.Single[]
@@ -125,6 +131,8 @@ struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 // TMPro.ITextPreprocessor
 struct ITextPreprocessor_tDBB49C8B68D7B80E8D233B9D9666C43981EFAAB9;
+// UnityEngine.Events.InvokableCallList
+struct InvokableCallList_t309E1C8C7CE885A0D2F98C84CEA77A8935688382;
 // VRKeys.Key
 struct Key_t396D17D34592CB1C9780841C800B62ACCEC9DB27;
 // VRKeys.Keyboard
@@ -153,6 +161,8 @@ struct MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71;
 struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A;
 // UnityEngine.Object
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
+// UnityEngine.Events.PersistentCallGroup
+struct PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25;
 // VRKeys.Placement
 struct Placement_tE0EEF054D3CD95AB0F30F7642AE6560D6D7271DB;
 // UnityEngine.UI.RectMask2D
@@ -221,6 +231,8 @@ struct U3CDoSetPlaceholderMessageU3Ed__56_tFD392795968C8BAAA734F686EC673A64F1ED7
 struct U3CEnableWhenInitializedU3Ed__42_tC4860FB1D79ECFBB3AFA7F4F54DE0DAF3F93E581;
 // VRKeys.Keyboard/<SetupKeys>d__63
 struct U3CSetupKeysU3Ed__63_t093F72AD4198719FE11510872274573DA669A779;
+// VRKeys.Keyboard/<Start>d__39
+struct U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5;
 // VRKeys.Keyboard/KeyboardSubmitEvent
 struct KeyboardSubmitEvent_t4C03FFB86E9DD47A9151A7C4F3ED7039B096BD91;
 // VRKeys.Keyboard/KeyboardUpdateEvent
@@ -379,6 +391,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CDoSetLanguageU3Ed__54_System_Collections
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDoSetPlaceholderMessageU3Ed__56_System_Collections_IEnumerator_Reset_mBC42B1111526852713B6104E4AD5B92D3192E81F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CEnableWhenInitializedU3Ed__42_System_Collections_IEnumerator_Reset_mCC18DE1C5BCBFF55AB0F3D1412B6B5A68C26D06B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CSetupKeysU3Ed__63_System_Collections_IEnumerator_Reset_mDDA2C39B2F7E63AE72C2A8AF81A0E305C8D70E11_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CStartU3Ed__39_System_Collections_IEnumerator_Reset_mB02B3126710952B1325D23931C9D52B39DABF7A5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -464,6 +478,17 @@ struct String_t_StaticFields
 {
 	// System.String System.String::Empty
 	String_t* ___Empty_6;
+};
+
+// UnityEngine.Events.UnityEventBase
+struct UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8  : public RuntimeObject
+{
+	// UnityEngine.Events.InvokableCallList UnityEngine.Events.UnityEventBase::m_Calls
+	InvokableCallList_t309E1C8C7CE885A0D2F98C84CEA77A8935688382* ___m_Calls_0;
+	// UnityEngine.Events.PersistentCallGroup UnityEngine.Events.UnityEventBase::m_PersistentCalls
+	PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25* ___m_PersistentCalls_1;
+	// System.Boolean UnityEngine.Events.UnityEventBase::m_CallsDirty
+	bool ___m_CallsDirty_2;
 };
 
 // System.ValueType
@@ -591,6 +616,17 @@ struct U3CSetupKeysU3Ed__63_t093F72AD4198719FE11510872274573DA669A779  : public 
 	LetterKey_t628886F07EBCA33107FB6BBD93B7C29F765C91FC* ___U3CkeyU3E5__17_19;
 };
 
+// VRKeys.Keyboard/<Start>d__39
+struct U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5  : public RuntimeObject
+{
+	// System.Int32 VRKeys.Keyboard/<Start>d__39::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object VRKeys.Keyboard/<Start>d__39::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// VRKeys.Keyboard VRKeys.Keyboard/<Start>d__39::<>4__this
+	Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* ___U3CU3E4__this_2;
+};
+
 // TMPro.TMP_TextProcessingStack`1<TMPro.FontWeight>
 struct TMP_TextProcessingStack_1_tA5C8CED87DD9E73F6359E23B334FFB5B6F813FD4 
 {
@@ -674,6 +710,13 @@ struct TMP_TextProcessingStack_1_tC8FAEB17246D3B171EFD11165A5761AE39B40D0C
 	int32_t ___m_RolloverSize_4;
 	// System.Int32 TMPro.TMP_TextProcessingStack`1::m_Count
 	int32_t ___m_Count_5;
+};
+
+// UnityEngine.Events.UnityEvent`1<System.String>
+struct UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257  : public UnityEventBase_t4968A4C72559F35C0923E4BD9C042C3A842E1DB8
+{
+	// System.Object[] UnityEngine.Events.UnityEvent`1::m_InvokeArray
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___m_InvokeArray_3;
 };
 
 // System.Boolean
@@ -1520,6 +1563,16 @@ struct VertexGradient_t2C057B53C0EA6E987C2B7BAB0305E686DA1C9A8F
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___bottomLeft_2;
 	// UnityEngine.Color TMPro.VertexGradient::bottomRight
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___bottomRight_3;
+};
+
+// VRKeys.Keyboard/KeyboardSubmitEvent
+struct KeyboardSubmitEvent_t4C03FFB86E9DD47A9151A7C4F3ED7039B096BD91  : public UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257
+{
+};
+
+// VRKeys.Keyboard/KeyboardUpdateEvent
+struct KeyboardUpdateEvent_t6D660FDC5D8BE2A54EF0188AEEC07865425A0E69  : public UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257
+{
 };
 
 // VRKeys.Placement/PlacementSettings
@@ -3027,6 +3080,8 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 };
 
 
+// System.Void UnityEngine.Events.UnityEvent`1<System.Object>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1__ctor_m8D77F4F05F69D0E52E8A445322811EEC25987525_gshared (UnityEvent_1_t3CE03B42D5873C0C0E0692BEE72E1E6D5399F205* __this, const RuntimeMethod* method) ;
 // System.Void System.Func`1<System.Boolean>::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22_gshared (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<System.Object>(T,UnityEngine.Transform)
@@ -3036,8 +3091,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRun
 // T UnityEngine.Component::GetComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 
+// System.Void UnityEngine.Events.UnityEvent`1<System.String>::.ctor()
+inline void UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6 (UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257* __this, const RuntimeMethod* method)
+{
+	((  void (*) (UnityEvent_1_tC9859540CF1468306CAB6D758C0A0D95DBCEC257*, const RuntimeMethod*))UnityEvent_1__ctor_m8D77F4F05F69D0E52E8A445322811EEC25987525_gshared)(__this, method);
+}
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Collections.IEnumerator VRKeys.Keyboard::DoSetLanguage(VRKeys.KeyboardLayout)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Keyboard_DoSetLanguage_m754F6D983F45B74274A198A729BF4294E9AB0172 (Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* __this, int32_t ___lang0, const RuntimeMethod* method) ;
+// UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___routine0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
+// System.Void VRKeys.Keyboard::UpdateDisplayText()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Keyboard_UpdateDisplayText_m99D94C5FE3A9155B86FC9B5EB2DAFACDA1C37074 (Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* __this, const RuntimeMethod* method) ;
+// System.Void VRKeys.Keyboard::PlaceholderVisibility()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Keyboard_PlaceholderVisibility_m2AB7AC5744DD82F650637378B3799F6225EAD877 (Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* __this, const RuntimeMethod* method) ;
+// System.Void System.NotSupportedException::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
 // System.Void System.Func`1<System.Boolean>::.ctor(System.Object,System.IntPtr)
 inline void Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22 (Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method)
 {
@@ -3047,8 +3119,6 @@ inline void Func_1__ctor_mDFFAE9C73346372438B5B04C4558AC42F1A3DA22 (Func_1_t2BE7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitUntil__ctor_m2C925CF39695C35F4CB1AC997531F203AE1434DF (WaitUntil_tA1CD487C5811E7C1F8C4ADA85DF5F4EFDC1D41BD* __this, Func_1_t2BE7F58348C9CC544A8973B3A9E55541DE43C457* ___predicate0, const RuntimeMethod* method) ;
 // System.Void VRKeys.Keyboard::Enable()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Keyboard_Enable_m0D0AC99FE751F484508257B2A9231D0F7A5BD7BB (Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* __this, const RuntimeMethod* method) ;
-// System.Void System.NotSupportedException::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___seconds0, const RuntimeMethod* method) ;
 // System.Boolean VRKeys.Keyboard::ToggleShift()
@@ -3057,12 +3127,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Keyboard_ToggleShift_m09C3A7DCA94998A2A6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Layout_tAFB57BD34CBB99B4BCA72289937C5AC16FBD1F50* LayoutList_GetLayout_m01797E7F7A9DD6CC4E4256890F12BEAA551C41C6 (int32_t ___layout0, const RuntimeMethod* method) ;
 // System.Collections.IEnumerator VRKeys.Keyboard::SetupKeys()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Keyboard_SetupKeys_m337F8E62BD4496D4D39A3E3A32D6F02524EC17CF (Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* __this, const RuntimeMethod* method) ;
-// UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___routine0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.GameObject::get_activeSelf()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
 // UnityEngine.GameObject UnityEngine.Component::get_gameObject()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
@@ -3212,6 +3278,203 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Quaternion_Internal_MakePositive_m864320DA2D027C186C95B2A5BC2C66B0EB4A6C11 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___euler0, const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_FromEulerRad_m2842B9FFB31CDC0F80B7C2172E22831D11D91E93 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___euler0, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void VRKeys.Keyboard/KeyboardUpdateEvent::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyboardUpdateEvent__ctor_mAEB19268D6DC0BDBBCC23D43BB2E8C7723BAA9B4 (KeyboardUpdateEvent_t6D660FDC5D8BE2A54EF0188AEEC07865425A0E69* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6(__this, UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6_RuntimeMethod_var);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void VRKeys.Keyboard/KeyboardSubmitEvent::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyboardSubmitEvent__ctor_m6C7530CFCBCF7ED0D8029C2CC8F41FA8BE87AD63 (KeyboardSubmitEvent_t4C03FFB86E9DD47A9151A7C4F3ED7039B096BD91* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6(__this, UnityEvent_1__ctor_m0F7D790DACD6F3D18E865D01FE4427603C1B0CC6_RuntimeMethod_var);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void VRKeys.Keyboard/<Start>d__39::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartU3Ed__39__ctor_mE5086DD8B0D20F1707E6A977CB52D42A9DA269DF (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___U3CU3E1__state0;
+		__this->___U3CU3E1__state_0 = L_0;
+		return;
+	}
+}
+// System.Void VRKeys.Keyboard/<Start>d__39::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartU3Ed__39_System_IDisposable_Dispose_m15B4AA7D2EC181DABAB167BFDF8C8CAA6DD154D7 (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Boolean VRKeys.Keyboard/<Start>d__39::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CStartU3Ed__39_MoveNext_mFF15E3FD067927DBF94ACD50BFB2645A608AA44B (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state_0;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0016;
+	}
+
+IL_0012:
+	{
+		goto IL_0018;
+	}
+
+IL_0014:
+	{
+		goto IL_0050;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+
+IL_0018:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// yield return StartCoroutine (DoSetLanguage (keyboardLayout));
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_3 = __this->___U3CU3E4__this_2;
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_4 = __this->___U3CU3E4__this_2;
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_5 = __this->___U3CU3E4__this_2;
+		NullCheck(L_5);
+		int32_t L_6 = L_5->___keyboardLayout_5;
+		NullCheck(L_4);
+		RuntimeObject* L_7;
+		L_7 = Keyboard_DoSetLanguage_m754F6D983F45B74274A198A729BF4294E9AB0172(L_4, L_6, NULL);
+		NullCheck(L_3);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8;
+		L_8 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_3, L_7, NULL);
+		__this->___U3CU3E2__current_1 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_8);
+		__this->___U3CU3E1__state_0 = 1;
+		return (bool)1;
+	}
+
+IL_0050:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// validationNotice.SetActive (false);
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_9 = __this->___U3CU3E4__this_2;
+		NullCheck(L_9);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = L_9->___validationNotice_9;
+		NullCheck(L_10);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)0, NULL);
+		// infoNotice.SetActive (false);
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_11 = __this->___U3CU3E4__this_2;
+		NullCheck(L_11);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = L_11->___infoNotice_11;
+		NullCheck(L_12);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
+		// successNotice.SetActive (false);
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_13 = __this->___U3CU3E4__this_2;
+		NullCheck(L_13);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = L_13->___successNotice_13;
+		NullCheck(L_14);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_14, (bool)0, NULL);
+		// UpdateDisplayText ();
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_15 = __this->___U3CU3E4__this_2;
+		NullCheck(L_15);
+		Keyboard_UpdateDisplayText_m99D94C5FE3A9155B86FC9B5EB2DAFACDA1C37074(L_15, NULL);
+		// PlaceholderVisibility ();
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_16 = __this->___U3CU3E4__this_2;
+		NullCheck(L_16);
+		Keyboard_PlaceholderVisibility_m2AB7AC5744DD82F650637378B3799F6225EAD877(L_16, NULL);
+		// initialized = true;
+		Keyboard_tC3BEE1EC39529B54EBA7A09886EC11837EE9E4CB* L_17 = __this->___U3CU3E4__this_2;
+		NullCheck(L_17);
+		L_17->___initialized_30 = (bool)1;
+		// }
+		return (bool)0;
+	}
+}
+// System.Object VRKeys.Keyboard/<Start>d__39::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartU3Ed__39_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m18ADC222E6422A760AB77F7D4104A70363815AEE (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+// System.Void VRKeys.Keyboard/<Start>d__39::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartU3Ed__39_System_Collections_IEnumerator_Reset_mB02B3126710952B1325D23931C9D52B39DABF7A5 (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CStartU3Ed__39_System_Collections_IEnumerator_Reset_mB02B3126710952B1325D23931C9D52B39DABF7A5_RuntimeMethod_var)));
+	}
+}
+// System.Object VRKeys.Keyboard/<Start>d__39::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartU3Ed__39_System_Collections_IEnumerator_get_Current_m35914A35DE2B856A89074C2C92D635BCDC222C68 (U3CStartU3Ed__39_t9D8AC0A4B4126606DEC090C4E920549BC3B357D5* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

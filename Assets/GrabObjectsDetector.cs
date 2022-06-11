@@ -9,7 +9,6 @@ public class GrabObjectsDetector : MonoBehaviour
     private bool isGrabbingGun;
 
     public PCInteractionProvider pCInteractionProvider;
-    public CustomBaseControllerManager customBaseControllerManagerLeft;
     public CustomBaseControllerManager customBaseControllerManagerRight;
 
     void OnTriggerEnter(Collider col)
@@ -20,7 +19,7 @@ public class GrabObjectsDetector : MonoBehaviour
             isGrabbingGun = true;
 
             //Adjusting position and parenting
-            col.transform.position = rightHand.transform.position + new Vector3(-0.5f, -0.2f, 0.3f);
+            col.transform.position = rightHand.transform.position + new Vector3(-0.1f, -0.2f, 0.3f);
             col.transform.rotation = Quaternion.Euler(rightHand.transform.eulerAngles.x,rightHand.transform.eulerAngles.y,rightHand.transform.eulerAngles.z);
             col.transform.parent   = rightHand.transform;
 

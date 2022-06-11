@@ -22691,7 +22691,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1972433908}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1815647402
 Rigidbody:
@@ -24010,8 +24010,8 @@ Transform:
   m_Children:
   - {fileID: 1107745513}
   - {fileID: 1984577320}
-  - {fileID: 1046872610}
   - {fileID: 1815647401}
+  - {fileID: 1046872610}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25855,4 +25855,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 1713590836}
   projectile: {fileID: 6305926719863788586, guid: 33505e3fd92b0a94d963e18834cd713d, type: 3}
-  projectileSpeed: 200
+  projectileSpeed: 100
