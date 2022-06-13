@@ -236,12 +236,20 @@ struct List_1_tA5BDE435C735A082941CD33D212F97F4AE9FA55F;
 struct List_1_t2CDCA768E7F493F5EDEBC75AEB200FD621354E35;
 // System.Collections.Generic.List`1<UnityEngine.Color32>
 struct List_1_t3517D52AE25CA3B19051E691E9C06ED03A3AB9B8;
+// System.Collections.Generic.List`1<UnityEngine.Component>
+struct List_1_t584CB490C8F4C21E0A0D5545409ED60BF71F3FE4;
 // System.Collections.Generic.List`1<UnityEngine.EventSystems.EventSystem>
 struct List_1_tF2FE88545EFEC788CAAE6C74EC2F78E937FCCAC3;
 // System.Collections.Generic.List`1<UnityEngine.GameObject>
 struct List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B;
 // System.Collections.Generic.List`1<UnityEngine.UI.Graphic>
 struct List_1_tF6D13D87DD02D4EF3ECD7763371397BD6D1A2C0F;
+// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewControllerChange>
+struct List_1_tAE460F42AC335F9ADFDAB761B93C2E8883845E5F;
+// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewOwnerChange>
+struct List_1_t7628C79979ECE33C758FA5C52526761CA20F2167;
+// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewPreNetDestroy>
+struct List_1_tA7AAD9C9730173B4B69D3E42B07AF11817191181;
 // System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRActivateInteractable>
 struct List_1_tAB2FD3FF9900A585A26C6DC2D8EE94D30F2AECCA;
 // System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.IXRHoverInteractable>
@@ -278,6 +286,8 @@ struct List_1_t90832B88D7207769654164CC28440CF594CC397D;
 struct List_1_t9F19053F72A3E5B96604F70A14B49B27869D5C97;
 // System.Collections.Generic.List`1<UnityEngine.XR.Interaction.Toolkit.XRRayInteractor/SamplePoint>
 struct List_1_tC0F6311D5ACC55EC4184D225E50673DBDAC555BD;
+// System.Collections.Generic.Queue`1<Photon.Pun.PhotonView/CallbackTargetChange>
+struct Queue_1_tF178FEC52A1E31BA7A3C30BE84E4770D020B061B;
 // UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.ColorTween>
 struct TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4;
 // UnityEngine.Events.UnityAction`1<System.Boolean>
@@ -346,6 +356,8 @@ struct LetterKeyU5BU5D_tBD8BD9BF637DB958A7C2EF070431328C3822C39B;
 struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 // TMPro.MaterialReference[]
 struct MaterialReferenceU5BU5D_t7491D335AB3E3E13CE9C0F5E931F396F6A02E1F2;
+// UnityEngine.MonoBehaviour[]
+struct MonoBehaviourU5BU5D_tEB91860B3CEE2D63A7833A2842EB9CE4547DDBD7;
 // OVROverlay[]
 struct OVROverlayU5BU5D_t0787D5D37FCAE59BD91C1125190EAF75B940B44D;
 // System.Object[]
@@ -572,6 +584,10 @@ struct OVRTracker_t5E60EE08D82308F2F8206AD43AE8CC4925938154;
 struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
 // UnityEngine.Events.PersistentCallGroup
 struct PersistentCallGroup_tB826EDF15DC80F71BCBCD8E410FD959A04C33F25;
+// Photon.Pun.PhotonView
+struct PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B;
+// Photon.Realtime.Player
+struct Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C;
 // UnityEngine.EventSystems.PointerEventData
 struct PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB;
 // UnityEngine.UI.RectMask2D
@@ -950,6 +966,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral720B89BC1CF074680BF615E0512A60D67CE076A7
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
 IL2CPP_EXTERN_C String_t* _stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7;
 IL2CPP_EXTERN_C String_t* _stringLiteral82ADE43ADDAB8C063E2025F23CA01BDD1102D215;
+IL2CPP_EXTERN_C String_t* _stringLiteral89EB8F223188BBAA6012CE506E5F51DE84036C7C;
 IL2CPP_EXTERN_C String_t* _stringLiteral99172736F16958769E75A3BCD7F0872C0734C896;
 IL2CPP_EXTERN_C String_t* _stringLiteral9DCEFD441B4B3397F8BA8D130DB8A8A22E8F9256;
 IL2CPP_EXTERN_C String_t* _stringLiteralA40B930A4F75676F246AD25599CDA82D9B9030AD;
@@ -1004,6 +1021,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisOVROverlay_t236C
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisToggleGroup_tF2E6FE7D4B17BDBF82462715CFB57C4FDE0A2A2C_m4B74F74B0C7DF2BD2A5061E4BA49A25AB8F95AE7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisVideoPlayer_t48EA4A8117B822BC59590150DED9AD46C62F65D3_m5E711BC1432102F3C65C301B965F9B5FDF4A8F1D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_mB84A0931B2081CCADE7C5D459B2A8FAA6D3D3BD3_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisTeleportPoint_tA012B52592886F5C71E1D7F55672FC8882B841D9_m295AF387D724432F1397164CE1A726F3A9ED830B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m16304651E2FA050A95BC62AAB3A9D7C9D3A08728_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisXRRayInteractor_t0B25C1D5A938B199A71908E189AB351B43DA4C76_mDBEEFFED7B73842AE7ABD97624DFBD94B89A1B62_RuntimeMethod_var;
@@ -4544,6 +4562,10 @@ struct Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB  : public MonoBehaviour_t
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fieldOfView_5;
 	// System.Boolean Enemy::isWalking
 	bool ___isWalking_6;
+	// UnityEngine.GameObject Enemy::enemySpawner
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___enemySpawner_7;
+	// Photon.Pun.PhotonView Enemy::m_photonView
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___m_photonView_8;
 };
 
 // EnemySpawner
@@ -4555,6 +4577,8 @@ struct EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___zombiePrefab_5;
 	// System.Single EnemySpawner::timeRate
 	float ___timeRate_6;
+	// System.Int32 EnemySpawner::enemyCounter
+	int32_t ___enemyCounter_7;
 };
 
 // FieldOfView
@@ -5227,6 +5251,67 @@ struct OVRScreenFade_tCFBC0A69E92FF77827F6CF5095FBE7F4A338B774_StaticFields
 {
 	// OVRScreenFade OVRScreenFade::<instance>k__BackingField
 	OVRScreenFade_tCFBC0A69E92FF77827F6CF5095FBE7F4A338B774* ___U3CinstanceU3Ek__BackingField_4;
+};
+
+// Photon.Pun.PhotonView
+struct PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// System.Byte Photon.Pun.PhotonView::Group
+	uint8_t ___Group_4;
+	// System.Int32 Photon.Pun.PhotonView::prefixField
+	int32_t ___prefixField_5;
+	// System.Object[] Photon.Pun.PhotonView::instantiationDataField
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___instantiationDataField_6;
+	// System.Collections.Generic.List`1<System.Object> Photon.Pun.PhotonView::lastOnSerializeDataSent
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___lastOnSerializeDataSent_7;
+	// System.Collections.Generic.List`1<System.Object> Photon.Pun.PhotonView::syncValues
+	List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___syncValues_8;
+	// System.Object[] Photon.Pun.PhotonView::lastOnSerializeDataReceived
+	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___lastOnSerializeDataReceived_9;
+	// Photon.Pun.ViewSynchronization Photon.Pun.PhotonView::Synchronization
+	int32_t ___Synchronization_10;
+	// System.Boolean Photon.Pun.PhotonView::mixedModeIsReliable
+	bool ___mixedModeIsReliable_11;
+	// Photon.Pun.OwnershipOption Photon.Pun.PhotonView::OwnershipTransfer
+	int32_t ___OwnershipTransfer_12;
+	// Photon.Pun.PhotonView/ObservableSearch Photon.Pun.PhotonView::observableSearch
+	int32_t ___observableSearch_13;
+	// System.Collections.Generic.List`1<UnityEngine.Component> Photon.Pun.PhotonView::ObservedComponents
+	List_1_t584CB490C8F4C21E0A0D5545409ED60BF71F3FE4* ___ObservedComponents_14;
+	// UnityEngine.MonoBehaviour[] Photon.Pun.PhotonView::RpcMonoBehaviours
+	MonoBehaviourU5BU5D_tEB91860B3CEE2D63A7833A2842EB9CE4547DDBD7* ___RpcMonoBehaviours_15;
+	// System.Boolean Photon.Pun.PhotonView::<IsMine>k__BackingField
+	bool ___U3CIsMineU3Ek__BackingField_16;
+	// Photon.Realtime.Player Photon.Pun.PhotonView::<Controller>k__BackingField
+	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___U3CControllerU3Ek__BackingField_17;
+	// System.Int32 Photon.Pun.PhotonView::<CreatorActorNr>k__BackingField
+	int32_t ___U3CCreatorActorNrU3Ek__BackingField_18;
+	// System.Boolean Photon.Pun.PhotonView::<AmOwner>k__BackingField
+	bool ___U3CAmOwnerU3Ek__BackingField_19;
+	// Photon.Realtime.Player Photon.Pun.PhotonView::<Owner>k__BackingField
+	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___U3COwnerU3Ek__BackingField_20;
+	// System.Int32 Photon.Pun.PhotonView::ownerActorNr
+	int32_t ___ownerActorNr_21;
+	// System.Int32 Photon.Pun.PhotonView::controllerActorNr
+	int32_t ___controllerActorNr_22;
+	// System.Int32 Photon.Pun.PhotonView::sceneViewId
+	int32_t ___sceneViewId_23;
+	// System.Int32 Photon.Pun.PhotonView::viewIdField
+	int32_t ___viewIdField_24;
+	// System.Int32 Photon.Pun.PhotonView::InstantiationId
+	int32_t ___InstantiationId_25;
+	// System.Boolean Photon.Pun.PhotonView::isRuntimeInstantiated
+	bool ___isRuntimeInstantiated_26;
+	// System.Boolean Photon.Pun.PhotonView::removedFromLocalViewList
+	bool ___removedFromLocalViewList_27;
+	// System.Collections.Generic.Queue`1<Photon.Pun.PhotonView/CallbackTargetChange> Photon.Pun.PhotonView::CallbackChangeQueue
+	Queue_1_tF178FEC52A1E31BA7A3C30BE84E4770D020B061B* ___CallbackChangeQueue_28;
+	// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewPreNetDestroy> Photon.Pun.PhotonView::OnPreNetDestroyCallbacks
+	List_1_tA7AAD9C9730173B4B69D3E42B07AF11817191181* ___OnPreNetDestroyCallbacks_29;
+	// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewOwnerChange> Photon.Pun.PhotonView::OnOwnerChangeCallbacks
+	List_1_t7628C79979ECE33C758FA5C52526761CA20F2167* ___OnOwnerChangeCallbacks_30;
+	// System.Collections.Generic.List`1<Photon.Pun.IOnPhotonViewControllerChange> Photon.Pun.PhotonView::OnControllerChangeCallbacks
+	List_1_tAE460F42AC335F9ADFDAB761B93C2E8883845E5F* ___OnControllerChangeCallbacks_31;
 };
 
 // SimpleCapsuleWithStickMovement
@@ -7768,12 +7853,12 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 };
 
 
+// T UnityEngine.GameObject::GetComponent<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<System.Object>(T,UnityEngine.Vector3,UnityEngine.Quaternion)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeObject_m2A2DD50EC8EB54C91AF71E02DFD6969174D82B08_gshared (RuntimeObject* ___original0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation2, const RuntimeMethod* method) ;
-// T UnityEngine.GameObject::GetComponent<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityAction`1<System.Object>::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_m0C2FC6B483B474AE9596A43EBA7FF6E85503A92A_gshared (UnityAction_1_t9C30BCD020745BF400CBACF22C6F34ADBA2DDA6A* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Events.UnityEvent`1<System.Object>::AddListener(UnityEngine.Events.UnityAction`1<T0>)
@@ -7859,6 +7944,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m343D2D34D5EC299A8A8BFE
 // T System.Nullable`1<System.IntPtr>::GetValueOrDefault()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t Nullable_1_GetValueOrDefault_mECC521D2F2B0E6614874E90EFCF1ADADB7B5C1C0_gshared_inline (Nullable_1_t02905B3413B8A12DF3D51046F80F708B11A08455* __this, const RuntimeMethod* method) ;
 
+// UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51 (String_t* ___name0, const RuntimeMethod* method) ;
+// T UnityEngine.GameObject::GetComponent<EnemySpawner>()
+inline EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
+}
+// System.Void EnemySpawner::AddOneEnemyCounter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_AddOneEnemyCounter_mF601450CDB798CCB5B490AD9B02EB010264DE236 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) ;
+// System.Void Photon.Pun.PhotonView::set_ViewID(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_ViewID_m81F2B69E5C222A86270FCDF08F0C4FEAD98AFB18 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.Animator>()
 inline Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -7915,8 +8011,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Contains_m6D77B121FADA7CA5F397C0F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Void FollowObject::ChangeTarget(UnityEngine.GameObject)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FollowObject_ChangeTarget_mF63229B22AEC32D295D7A7744263976264BBE1AE (FollowObject_t43FC8337CA547B31B5A583FE5BC755D834C922AA* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___newTarget0, const RuntimeMethod* method) ;
-// UnityEngine.GameObject UnityEngine.GameObject::Find(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51 (String_t* ___name0, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<UnityEngine.Transform>()
 inline Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* GameObject_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m16304651E2FA050A95BC62AAB3A9D7C9D3A08728 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
 {
@@ -9102,14 +9196,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enemy_Start_m8BBD9A5AE10A27ABDFCD9168B93
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral89EB8F223188BBAA6012CE506E5F51DE84036C7C);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// enemySpawner = GameObject.Find("EnemySpawner");
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = GameObject_Find_mFF1D6C65A7E2CD82443F4DCE4C53472FB30B7F51(_stringLiteral89EB8F223188BBAA6012CE506E5F51DE84036C7C, NULL);
+		__this->___enemySpawner_7 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___enemySpawner_7), (void*)L_0);
+		// enemySpawner.GetComponent<EnemySpawner>().AddOneEnemyCounter();
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___enemySpawner_7;
+		NullCheck(L_1);
+		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_2;
+		L_2 = GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D(L_1, GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D_RuntimeMethod_var);
+		NullCheck(L_2);
+		EnemySpawner_AddOneEnemyCounter_mF601450CDB798CCB5B490AD9B02EB010264DE236(L_2, NULL);
+		// m_photonView.ViewID = 100 + enemySpawner.GetComponent<EnemySpawner>().enemyCounter;
+		PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* L_3 = __this->___m_photonView_8;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___enemySpawner_7;
+		NullCheck(L_4);
+		EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* L_5;
+		L_5 = GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D(L_4, GameObject_GetComponent_TisEnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177_mBC2D56EA97B73A6D65FEF57479955E1E6DCDFE7D_RuntimeMethod_var);
+		NullCheck(L_5);
+		int32_t L_6 = L_5->___enemyCounter_7;
+		NullCheck(L_3);
+		PhotonView_set_ViewID_m81F2B69E5C222A86270FCDF08F0C4FEAD98AFB18(L_3, ((int32_t)il2cpp_codegen_add(((int32_t)100), L_6)), NULL);
 		// animator = GetComponent<Animator>();
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0;
-		L_0 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
-		__this->___animator_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___animator_4), (void*)L_0);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_7;
+		L_7 = Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE(__this, Component_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_m1C9FCB4BBE56BEC6BDEF6E4BA1E5DFF91614D7CE_RuntimeMethod_var);
+		__this->___animator_4 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___animator_4), (void*)L_7);
 		// isWalking = true;
 		__this->___isWalking_6 = (bool)1;
 		// }
@@ -9155,19 +9273,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enemy__ctor_mB6697627910F785A971C20C671D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_Start_m5302D69E915FF1027CFB0C1198CBCAA9430819A4 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) 
 {
 	{
+		// enemyCounter = 0;
+		__this->___enemyCounter_7 = 0;
 		// StartCoroutine(CreateZombies());
 		RuntimeObject* L_0;
 		L_0 = EnemySpawner_CreateZombies_mF8AF44176B643997C12815950B410F73D56C51EA(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
 		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
-		// }
-		return;
-	}
-}
-// System.Void EnemySpawner::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_Update_m85D72B9CF6D0D9D7BE8A6816CE556BF5E9D7FFC5 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) 
-{
-	{
 		// }
 		return;
 	}
@@ -9190,6 +9302,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EnemySpawner_CreateZombies_mF8
 		L_1->___U3CU3E4__this_2 = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
 		return L_1;
+	}
+}
+// System.Void EnemySpawner::AddOneEnemyCounter()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_AddOneEnemyCounter_mF601450CDB798CCB5B490AD9B02EB010264DE236 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) 
+{
+	{
+		// enemyCounter++;
+		int32_t L_0 = __this->___enemyCounter_7;
+		__this->___enemyCounter_7 = ((int32_t)il2cpp_codegen_add(L_0, 1));
+		// }
+		return;
 	}
 }
 // System.Void EnemySpawner::OnDrawGizmosSelected()

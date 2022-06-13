@@ -38626,6 +38626,10 @@ struct Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB  : public MonoBehaviour_t
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fieldOfView_5;
 	// System.Boolean Enemy::isWalking
 	bool ___isWalking_6;
+	// UnityEngine.GameObject Enemy::enemySpawner
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___enemySpawner_7;
+	// Photon.Pun.PhotonView Enemy::m_photonView
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___m_photonView_8;
 };
 
 // EnemySpawner
@@ -38637,6 +38641,8 @@ struct EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___zombiePrefab_5;
 	// System.Single EnemySpawner::timeRate
 	float ___timeRate_6;
+	// System.Int32 EnemySpawner::enemyCounter
+	int32_t ___enemyCounter_7;
 };
 
 // Oculus.Platform.Samples.EntitlementCheck.EntitlementCheck

@@ -32353,6 +32353,10 @@ struct Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB  : public MonoBehaviour_t
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fieldOfView_5;
 	// System.Boolean Enemy::isWalking
 	bool ___isWalking_6;
+	// UnityEngine.GameObject Enemy::enemySpawner
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___enemySpawner_7;
+	// Photon.Pun.PhotonView Enemy::m_photonView
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___m_photonView_8;
 };
 
 // EnemySpawner
@@ -32364,6 +32368,8 @@ struct EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___zombiePrefab_5;
 	// System.Single EnemySpawner::timeRate
 	float ___timeRate_6;
+	// System.Int32 EnemySpawner::enemyCounter
+	int32_t ___enemyCounter_7;
 };
 
 // FieldOfView
@@ -47149,15 +47155,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5545[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5548[1] = 
 {
 	static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t04635BCB4D7C7C21D10547072BD307E80F347DD3_StaticFields, ___1C3635C112D556F4C11A4FE6BDE6ED3F126C4B2B546811BDB64DE7BDED3A05CB_0)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5550[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5550[5] = 
 {
-	static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___animator_4)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___fieldOfView_5)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___isWalking_6)),};
+	static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___animator_4)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___fieldOfView_5)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___isWalking_6)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___enemySpawner_7)),static_cast<int32_t>(offsetof(Enemy_t10DB314C96B1CE78B8D967CD3B39F05126409BBB, ___m_photonView_8)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5551[5] = 
 {
 	static_cast<int32_t>(offsetof(U3CCreateZombiesU3Ed__5_t8F5446473A1FD03E199BCBAEC8693241A199EFCA, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CCreateZombiesU3Ed__5_t8F5446473A1FD03E199BCBAEC8693241A199EFCA, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CCreateZombiesU3Ed__5_t8F5446473A1FD03E199BCBAEC8693241A199EFCA, ___U3CU3E4__this_2)),static_cast<int32_t>(offsetof(U3CCreateZombiesU3Ed__5_t8F5446473A1FD03E199BCBAEC8693241A199EFCA, ___U3CindexCurrentSpawnerU3E5__1_3)),static_cast<int32_t>(offsetof(U3CCreateZombiesU3Ed__5_t8F5446473A1FD03E199BCBAEC8693241A199EFCA, ___U3CzombieU3E5__2_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5552[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5552[4] = 
 {
-	static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___spawnerPoint_4)),static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___zombiePrefab_5)),static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___timeRate_6)),};
+	static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___spawnerPoint_4)),static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___zombiePrefab_5)),static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___timeRate_6)),static_cast<int32_t>(offsetof(EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177, ___enemyCounter_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5553[1] = 
 {
 	static_cast<int32_t>(offsetof(FieldOfView_t8F394C94B5F54AFAC6BAAD24FFFA6CB80F3DEBFB, ___followObject_4)),};

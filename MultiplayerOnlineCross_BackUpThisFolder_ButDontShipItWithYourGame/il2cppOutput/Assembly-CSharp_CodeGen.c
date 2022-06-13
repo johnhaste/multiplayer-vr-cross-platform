@@ -20,10 +20,10 @@ extern void Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8 (void);
 extern void Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933 (void);
 // 0x00000004 System.Void EnemySpawner::Start()
 extern void EnemySpawner_Start_m5302D69E915FF1027CFB0C1198CBCAA9430819A4 (void);
-// 0x00000005 System.Void EnemySpawner::Update()
-extern void EnemySpawner_Update_m85D72B9CF6D0D9D7BE8A6816CE556BF5E9D7FFC5 (void);
-// 0x00000006 System.Collections.IEnumerator EnemySpawner::CreateZombies()
+// 0x00000005 System.Collections.IEnumerator EnemySpawner::CreateZombies()
 extern void EnemySpawner_CreateZombies_mF8AF44176B643997C12815950B410F73D56C51EA (void);
+// 0x00000006 System.Void EnemySpawner::AddOneEnemyCounter()
+extern void EnemySpawner_AddOneEnemyCounter_mF601450CDB798CCB5B490AD9B02EB010264DE236 (void);
 // 0x00000007 System.Void EnemySpawner::OnDrawGizmosSelected()
 extern void EnemySpawner_OnDrawGizmosSelected_m442B7C88228AB48F2A1C5FD2AD85D3E777A51773 (void);
 // 0x00000008 System.Void EnemySpawner::.ctor()
@@ -3945,8 +3945,8 @@ static Il2CppMethodPointer s_methodPointers[1990] =
 	Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8,
 	Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933,
 	EnemySpawner_Start_m5302D69E915FF1027CFB0C1198CBCAA9430819A4,
-	EnemySpawner_Update_m85D72B9CF6D0D9D7BE8A6816CE556BF5E9D7FFC5,
 	EnemySpawner_CreateZombies_mF8AF44176B643997C12815950B410F73D56C51EA,
+	EnemySpawner_AddOneEnemyCounter_mF601450CDB798CCB5B490AD9B02EB010264DE236,
 	EnemySpawner_OnDrawGizmosSelected_m442B7C88228AB48F2A1C5FD2AD85D3E777A51773,
 	EnemySpawner__ctor_m619CE38261A8A67AB91D66ED5BE44E56C1897E74,
 	U3CCreateZombiesU3Ed__5__ctor_mD0FBE2F7C2123F9E848C1C1B200506732FC6E487,
@@ -5949,8 +5949,8 @@ static const int32_t s_InvokerIndices[1990] =
 	6783,
 	6783,
 	6783,
-	6783,
 	6661,
+	6783,
 	6783,
 	6783,
 	5378,
