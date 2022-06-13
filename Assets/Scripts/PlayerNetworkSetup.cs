@@ -55,9 +55,11 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.GetComponent<LocomotionSystem>().enabled = false;
                 LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
 
-                //Adjust Player Hands
+                //Adjust Player Hands and Body
                 AvatarLeftHandGameObject.transform.position  = new Vector3(-0.3f, 0.8f, 0.3f);
                 AvatarRightHandGameObject.transform.position = new Vector3( 0.3f, 0.8f, 0.3f);
+                AvatarHeadGameObject.transform.position = new Vector3(0f,0.8f,0f);
+                AvatarBodyGameObject.transform.position = new Vector3(0f,0f,0f);
 
                 //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
