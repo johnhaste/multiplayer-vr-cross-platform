@@ -50,14 +50,6 @@ public class Enemy : MonoBehaviour, IPunObservable
         
     }
 
-    void OnTriggerEnter(Collider col)
-    {
-        if(col.name == "FirePlace")
-        {
-            Die();
-        }
-    }
-
     [PunRPC]
     public void LoseHealth(int damage)
     {

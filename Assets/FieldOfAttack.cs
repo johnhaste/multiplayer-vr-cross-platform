@@ -13,5 +13,11 @@ public class FieldOfAttack : MonoBehaviour
         {
            enemy.AttackPlayer(col.gameObject);
         }
+
+      
+        if(col.name == "FirePlace")
+        {
+            GetComponent<Enemy>().LoseHealth(100);
+        }
     }
 }
