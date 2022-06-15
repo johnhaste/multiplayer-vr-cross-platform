@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CauseDamage : MonoBehaviour
 {
+    public ParticleSystem fxBlood;
+
     void OnTriggerEnter(Collider col)
     {
-        print("Hitted:"+ col.name);
         if(col.gameObject.tag == "Enemy")
         {
-            print("Enemy hit");
+            fxBlood.Play();
             col.gameObject.GetComponent<Enemy>().LoseLives(1);
         }
     }
+
 }

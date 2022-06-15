@@ -140,6 +140,7 @@ MonoBehaviour:
   - {fileID: 3574916571952046687}
   - {fileID: 3574916570280357625}
   zombiePrefab: {fileID: 6872480779792985637, guid: b6ca9a9ae03e75c45873e625c2cd8dac, type: 3}
+  fxSpawn: {fileID: 4397334591890123668, guid: 2fcd343cda272da449668b06fcb78238, type: 3}
   timeRate: 5
   enemyCounter: 0
 --- !u!1 &3574916571952046687

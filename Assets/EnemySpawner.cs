@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] spawnerPoint;
     public GameObject zombiePrefab;
+    public ParticleSystem fxSpawn;
     public float timeRate = 5f;
     public int enemyCounter;
 
@@ -21,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             int indexCurrentSpawner = Random.Range(0,spawnerPoint.Length);
+            spawnerPoint[indexCurrentSpawner].GetComponent<InitialParticleEmission>().PlayChildFX();
             GameObject zombie = Instantiate(zombiePrefab, spawnerPoint[indexCurrentSpawner].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
             yield return new WaitForSeconds(timeRate);
         }
