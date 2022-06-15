@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldOfView : MonoBehaviour
+public class FieldOfAttack : MonoBehaviour
 {
-    public FollowObject followObject;
+    public Enemy enemy;
 
     void OnTriggerEnter(Collider col)
     {
-        //print("Collided:" + col.name);
+        //print("Attack:" + col.name);
         if(col.name.Contains("Player"))
         {
-           followObject.ChangeTarget(col.gameObject); 
+           enemy.Attack();
         }
     }
 }

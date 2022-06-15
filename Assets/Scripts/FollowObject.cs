@@ -18,12 +18,15 @@ public class FollowObject : MonoBehaviour
     void Update()
     {
         targetPosition = targetObject.GetComponent<Transform>();
-
-        transform.LookAt(targetPosition);
      
-        if(Vector3.Distance(transform.position,targetPosition.position) >= 1f){
-        
-            transform.position += transform.forward*speed*Time.deltaTime;
+        var lookPos = targetPosition.position - transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 1f);
+
+        if(Vector3.Distance(transform.position,targetPosition.position) >= 1f)
+        {
+            transform.position += transform.forward*speed*Time.deltaTime;   
         }
 
         /*    

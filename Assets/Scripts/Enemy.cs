@@ -95,10 +95,23 @@ public class Enemy : MonoBehaviour, IPunObservable
         StartCoroutine("WaitAndDie"); 
     }
 
+    public void Attack()
+    {
+        animator.SetTrigger("attack");
+        isWalking = false;
+        StartCoroutine("WaitAndWalk"); 
+    }
+
     IEnumerator WaitAndDie()
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
+    }
+
+    IEnumerator WaitAndWalk()
+    {
+        yield return new WaitForSeconds(1f);
+        isWalking = true;
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
