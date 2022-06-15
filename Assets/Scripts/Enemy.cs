@@ -95,11 +95,17 @@ public class Enemy : MonoBehaviour, IPunObservable
         StartCoroutine("WaitAndDie"); 
     }
 
+    public void AttackPlayer(GameObject player)
+    {
+        Attack();
+        StartCoroutine("WaitAndLook", player);
+    }
+
     public void Attack()
     {
         animator.SetTrigger("attack");
         isWalking = false;
-        StartCoroutine("WaitAndWalk"); 
+        StartCoroutine("WaitAndLook"); 
     }
 
     IEnumerator WaitAndDie()
@@ -108,10 +114,19 @@ public class Enemy : MonoBehaviour, IPunObservable
         Destroy(gameObject);
     }
 
-    IEnumerator WaitAndWalk()
+    IEnumerator WaitAndLook(GameObject player)
     {
         yield return new WaitForSeconds(1f);
-        isWalking = true;
+        //se estiver próximo do player ataca de novo
+        if(ComparePositions.IsClose(gameObject, player, 1f))
+        {
+            AttackPlayer(player);
+        }
+        else
+        {
+            isWalking = true;
+        }
+        
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

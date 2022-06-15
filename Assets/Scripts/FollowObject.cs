@@ -28,13 +28,11 @@ public class FollowObject : MonoBehaviour
         {
             transform.position += transform.forward*speed*Time.deltaTime;   
         }
-
-        /*    
-        if(Vector3.Distance(transform.position,Player.position) <= MaxDist)
+   
+        if(Vector3.Distance(transform.position,targetPosition.position) < 1f)
         {
-            //Here Call any function U want Like Shoot at here or something
+            GetComponent<Enemy>().Attack();
         } 
-        */
     }
 
     public void ChangeTarget(GameObject newTarget)

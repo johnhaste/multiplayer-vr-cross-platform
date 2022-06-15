@@ -11,7 +11,7 @@ public class FieldOfAttack : MonoBehaviour
         //print("Attack:" + col.name);
         if(col.name.Contains("Player"))
         {
-           enemy.Attack();
+           enemy.AttackPlayer(col.gameObject);
         }
     }
 }
