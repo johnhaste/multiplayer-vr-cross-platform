@@ -37,6 +37,14 @@ public class Enemy : MonoBehaviour
         
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if(col.name == "FirePlace")
+        {
+            Die();
+        }
+    }
+
     public void LoseLives(int damage)
     {
         if(lives > 0)
@@ -51,6 +59,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        lives = 0;
         animator.SetTrigger("die");
         StartCoroutine("WaitAndDie"); 
     }
