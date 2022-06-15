@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour, IPunObservable
     //Health
     public int health;
     public TextMeshProUGUI healthText;
+    public Image healthBar;
 
     public GameObject enemySpawner;
 
@@ -31,8 +33,11 @@ public class Enemy : MonoBehaviour, IPunObservable
         m_photonView.ViewID = 100 + enemySpawner.GetComponent<EnemySpawner>().enemyCounter;
         
         //Base Values
-        isWalking = true;   
-        health = 5;     
+        isWalking = true;  
+
+        //Health 
+        health = 5;
+        UpdateHealthUI();  
     }
 
     // Update is called once per frame
@@ -74,11 +79,13 @@ public class Enemy : MonoBehaviour, IPunObservable
     public void UpdateHealthUI()
     {
         healthText.text = health+"";
+        healthBar.rectTransform.sizeDelta = new Vector2( (float) health/10, 0.1f); 
     }
 
     public void DestroyHealthUI()
     {
         Destroy(healthText);
+        Destroy(healthBar);
     }
 
     public void Die()
