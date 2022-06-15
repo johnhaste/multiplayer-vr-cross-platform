@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public Animator animator;
     public GameObject fieldOfView;
     private bool isWalking;
+    public int lives;
 
     public GameObject enemySpawner;
 
@@ -22,13 +23,42 @@ public class Enemy : MonoBehaviour
         enemySpawner.GetComponent<EnemySpawner>().AddOneEnemyCounter();
         m_photonView.ViewID = 100 + enemySpawner.GetComponent<EnemySpawner>().enemyCounter;
         animator = GetComponent<Animator>();
-        isWalking = true;        
+        isWalking = true;   
+        lives = 5;     
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("isWalking", isWalking);
+        if(lives > 0)
+        {
+            animator.SetBool("isWalking", isWalking);
+        }
+        
+    }
+
+    public void LoseLives(int damage)
+    {
+        if(lives > 0)
+        {
+            lives -= damage;
+        }
+        else
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        animator.SetTrigger("die");
+        StartCoroutine("WaitAndDie"); 
+    }
+
+    IEnumerator WaitAndDie()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 
 }
