@@ -2273,6 +2273,7 @@ GameObject:
   - component: {fileID: 2395642401564384654}
   - component: {fileID: 8953795126740577911}
   - component: {fileID: 3632595219683187905}
+  - component: {fileID: 3620629323346105711}
   m_Layer: 0
   m_Name: Generic VR Player
   m_TagString: Untagged
@@ -2317,7 +2318,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 0
   ObservedComponents:
-  - {fileID: 8953795126740577911}
+  - {fileID: 3620629323346105711}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2388,6 +2389,22 @@ MonoBehaviour:
   AutoCreateRecorderIfNotFound: 1
   UsePrimaryRecorder: 1
   SetupDebugSpeaker: 0
+--- !u!114 &3620629323346105711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122829052827839440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6753143842098701962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,9 +2738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb52165361b8ef4ea3498b1a5e3b5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockMouse: 0
+  lockMouse: 1
   sensitivity: 2
   rightHand: {fileID: 91163736432123199}
+  lockCamera: 0
 --- !u!1 &8632053295305658006
 GameObject:
   m_ObjectHideFlags: 0
