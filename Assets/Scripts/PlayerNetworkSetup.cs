@@ -45,7 +45,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         if(photonView.IsMine)
         {
             
-            transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
+            //transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
 
             //Check if it's on PC or Quest
             if(!CurrentPlatformManager.instance.IsOnQuest()){
@@ -56,10 +56,10 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
 
                 //Adjust Player Hands and Body
-                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.3f, 0.8f, 0.3f);
-                AvatarRightHandGameObject.transform.position = new Vector3( 0.3f, 0.8f, 0.3f);
-                AvatarHeadGameObject.transform.position = new Vector3(0f,0.8f,0f);
-                AvatarBodyGameObject.transform.position = new Vector3(0f,0f,0f);
+                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.2f, 0.8f, 0.3f);
+                AvatarRightHandGameObject.transform.position = new Vector3( 0.2f, 0.8f, 0.3f);
+                AvatarHeadGameObject.transform.position      = new Vector3( 0.5f, 0.8f, 0f  );
+                AvatarBodyGameObject.transform.position      = new Vector3( 0.5f, 0f  , 0f  );
 
                 //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;

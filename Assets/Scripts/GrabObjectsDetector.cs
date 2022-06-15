@@ -13,6 +13,7 @@ public class GrabObjectsDetector : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        print("Grab Detector:" + col.name);
 
         if(col.name == "Gun" && !isGrabbingGun)
         {
