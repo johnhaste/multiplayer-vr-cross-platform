@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using Photon.Pun;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IPunObservable
 {
     public Animator animator;
     public GameObject fieldOfView;
     private bool isWalking;
-    public int lives;
+
+    //Health
+    public int health;
+    public TextMeshProUGUI healthText;
 
     public GameObject enemySpawner;
 
@@ -24,13 +28,13 @@ public class Enemy : MonoBehaviour
         m_photonView.ViewID = 100 + enemySpawner.GetComponent<EnemySpawner>().enemyCounter;
         animator = GetComponent<Animator>();
         isWalking = true;   
-        lives = 5;     
+        health = 5;     
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(lives > 0)
+        if(health > 0)
         {
             animator.SetBool("isWalking", isWalking);
         }
@@ -45,21 +49,38 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void LoseLives(int damage)
+    [PunRPC]
+    public void LoseHealth(int damage)
     {
-        if(lives > 0)
-        {
-            lives -= damage;
+
+        health -= damage;
+
+        if(health > 0)
+        {    
+            UpdateHealthUI();
         }
         else
         {
+            GetComponent<FollowObject>().enabled = false;
+            DestroyHealthUI();
             Die();
         }
+        
+    }
+
+    public void UpdateHealthUI()
+    {
+        healthText.text = health+"";
+    }
+
+    public void DestroyHealthUI()
+    {
+        Destroy(healthText);
     }
 
     public void Die()
     {
-        lives = 0;
+        health = 0;
         animator.SetTrigger("die");
         StartCoroutine("WaitAndDie"); 
     }
@@ -70,4 +91,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (!stream.IsWriting)
+        {
+            health = (int) stream.ReceiveNext(); 
+        }
+    }
 }

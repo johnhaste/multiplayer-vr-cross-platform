@@ -10,8 +10,10 @@ public class CauseDamage : MonoBehaviour
     {
         if(col.gameObject.tag == "Enemy")
         {
+            fxBlood.transform.parent = null;
             fxBlood.Play();
-            col.gameObject.GetComponent<Enemy>().LoseLives(1);
+            col.gameObject.GetComponent<Enemy>().LoseHealth(1);
+            Destroy(gameObject);
         }
     }
 

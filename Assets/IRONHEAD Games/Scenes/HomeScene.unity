@@ -4191,7 +4191,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3353666617858686432, guid: 379aea1ba0861ab4d9fb240d15a5e6bc, type: 3}
       propertyPath: m_text
-      value: LOADING
+      value: 'ENTER
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3353666617858686432, guid: 379aea1ba0861ab4d9fb240d15a5e6bc, type: 3}
       propertyPath: m_textAlignment
