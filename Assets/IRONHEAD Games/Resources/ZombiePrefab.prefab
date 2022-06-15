@@ -1477,7 +1477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6776206754457237479}
   fieldOfView: {fileID: 1096346959507829836}
-  health: 0
+  isWalking: 1
+  health: 5
   healthText: {fileID: 3271946154868695643}
   enemySpawner: {fileID: 0}
   m_photonView: {fileID: 6414593480787309822}

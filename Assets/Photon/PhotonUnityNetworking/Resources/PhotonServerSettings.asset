@@ -49,6 +49,7 @@ MonoBehaviour:
   - DestroyHealthUI
   - Die
   - UpdateHealthUI
+  - SpawnZombie
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviour, IPunObservable
 {
     public GameObject[] spawnerPoint;
     public GameObject zombiePrefab;
@@ -21,11 +22,18 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            int indexCurrentSpawner = Random.Range(0,spawnerPoint.Length);
-            spawnerPoint[indexCurrentSpawner].GetComponent<InitialParticleEmission>().PlayChildFX();
-            GameObject zombie = Instantiate(zombiePrefab, spawnerPoint[indexCurrentSpawner].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
+            gameObject.GetComponent<PhotonView>().RPC("SpawnZombie", RpcTarget.AllBufferedViaServer);
             yield return new WaitForSeconds(timeRate);
         }
+    }
+
+    [PunRPC]
+    public void SpawnZombie()
+    {
+        int indexCurrentSpawner = Random.Range(0,spawnerPoint.Length);
+        spawnerPoint[indexCurrentSpawner].GetComponent<InitialParticleEmission>().PlayChildFX();
+        GameObject zombie = Instantiate(zombiePrefab, spawnerPoint[indexCurrentSpawner].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
+            
     }
 
     public void AddOneEnemyCounter()
@@ -40,4 +48,8 @@ public class EnemySpawner : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, new Vector3(1f,1f,1f));
     }
 
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        
+    }
 }
