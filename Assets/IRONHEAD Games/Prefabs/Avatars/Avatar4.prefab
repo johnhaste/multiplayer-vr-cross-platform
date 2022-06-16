@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7771829316772041039}
   - component: {fileID: 5238283789400422998}
   - component: {fileID: 1877666225724233042}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HandR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6351882198937040404}
   - component: {fileID: 8966286188641260497}
   - component: {fileID: 7375440891160514272}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HandL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 2460175537207679341}
   - component: {fileID: 2039198042372870110}
   - component: {fileID: 4854161512565674805}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 8649215886880382321}
   - component: {fileID: 6278278715137083764}
   - component: {fileID: 8556090280678887424}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hair4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,13 +343,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8738650270694400280}
   - component: {fileID: 4045979484864874980}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Avatar4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8738650270694400280
 Transform:
   m_ObjectHideFlags: 0
@@ -386,6 +386,8 @@ MonoBehaviour:
   BodyTransform: {fileID: 2460175537207679341}
   HandLeftTransform: {fileID: 6351882198937040404}
   HandRightTransform: {fileID: 7771829316772041039}
+  Head: {fileID: 6701214060186683410}
+  Body: {fileID: 4052399868554627847}
 --- !u!1 &5921738429063371603
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +399,7 @@ GameObject:
   - component: {fileID: 3679916485205404914}
   - component: {fileID: 2077483064105514547}
   - component: {fileID: 9053623982141257385}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Watch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -480,7 +482,7 @@ GameObject:
   - component: {fileID: 4575591258581295829}
   - component: {fileID: 8543033646106753749}
   - component: {fileID: 6808244254802488867}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

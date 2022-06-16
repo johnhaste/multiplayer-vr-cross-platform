@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7451942520588637611}
   - component: {fileID: 5237577930039824234}
   - component: {fileID: 3017343294815965168}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Watch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3559221833898497750}
   - component: {fileID: 2510396480559528930}
   - component: {fileID: 8611026357408637370}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3260257213189019713}
   - component: {fileID: 2397338697258921231}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Avatar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,6 +219,8 @@ MonoBehaviour:
   BodyTransform: {fileID: 3559221833898497750}
   HandLeftTransform: {fileID: 890944728476012365}
   HandRightTransform: {fileID: 4584729431112624150}
+  Head: {fileID: 4745581233257826696}
+  Body: {fileID: 583873976400023657}
 --- !u!1 &4745581233257826696
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ GameObject:
   - component: {fileID: 1382963859741261905}
   - component: {fileID: 3418619421366961921}
   - component: {fileID: 5735500043163038480}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +316,7 @@ GameObject:
   - component: {fileID: 4584729431112624150}
   - component: {fileID: 2074243993305285391}
   - component: {fileID: 5653673180949097483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HandR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +399,7 @@ GameObject:
   - component: {fileID: 890944728476012365}
   - component: {fileID: 2888368109878585992}
   - component: {fileID: 3612444214867425209}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HandL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +483,7 @@ GameObject:
   - component: {fileID: 8110190528889587608}
   - component: {fileID: 5755563243502654007}
   - component: {fileID: 3723584019457494592}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hair2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

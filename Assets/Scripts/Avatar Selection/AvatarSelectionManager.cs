@@ -104,7 +104,7 @@ public class AvatarSelectionManager : MonoBehaviour
         }
 
         selectableAvatarModels[avatarIndex].SetActive(true);
-        Debug.Log(avatarSelectionNumber);
+        //Debug.Log(avatarSelectionNumber);
 
         LoadAvatarModelAt(avatarSelectionNumber);
     }
