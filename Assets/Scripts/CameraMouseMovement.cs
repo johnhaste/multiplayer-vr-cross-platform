@@ -46,7 +46,7 @@ public class CameraMouseMovement : MonoBehaviour
 				mouseY -= Input.GetAxis("Mouse Y") * sensitivity; // Incrementa o valor do eixo Y e multiplica pela sensibilidade. (Obs. usamos o - para inverter os valores)
 
 				transform.eulerAngles = new Vector3(mouseY, mouseX, 0); //Executa a rotação da câmera de acordo com os eixos
-				parentObject.transform.eulerAngles = new Vector3(mouseY, mouseX, 0); 
+				parentObject.transform.eulerAngles = new Vector3(0f, mouseX, 0); 
 				avatarObject.transform.eulerAngles = new Vector3(0f, mouseX, 0);
 				//rightHand.transform.eulerAngles = new Vector3(mouseY, mouseX, 0); //Executa a rotação da câmera de acordo com os eixos
 			}

@@ -10,7 +10,7 @@ public class CurrentPlatformManager : MonoBehaviour
     //TRUE  => To simulate quest being used on editor
     //FALSE => To simulate player on computer
     //If serializes field it doesn't work for some reason
-    private bool simulateOnQuest = true;
+    private bool simulateOnQuest = false;
 
     //Singleton
     private void Awake(){

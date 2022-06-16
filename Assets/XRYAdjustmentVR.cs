@@ -14,7 +14,7 @@ public class XRYAdjustmentVR : MonoBehaviour
         if(!CurrentPlatformManager.instance.IsOnQuest())
         {
             print("Adjust");
-            XRRig.transform.position = new Vector3(0f,3f,0f);
+            XRRig.transform.position = new Vector3(0f,3f,-1.5f);
         }
     }
 }

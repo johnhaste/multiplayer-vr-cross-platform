@@ -15,9 +15,11 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject AvatarBodyGameObject;
     public GameObject AvatarLeftHandGameObject;
     public GameObject AvatarRightHandGameObject;
+    public GameObject AvatarInputConverter;
     public GameObject[] AvatarModelPrefabs;
 
     //Scripts for PC
+    public GameObject mainCamera;
     public Camera playerCamera;
     public PCInteractionProvider pCMoveProvider;
     public CameraMouseMovement cameraMouseMovement;
@@ -34,10 +36,13 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
                 LocalXRRigGameobject.SetActive(false);
 
                 //Adjust Player Hands and Body
-                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.2f, 0.8f, 0.3f);
-                AvatarRightHandGameObject.transform.position = new Vector3( 0.2f, 0.8f, 0.3f);
+                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.2f, 1.3f, 0.3f);
+                AvatarRightHandGameObject.transform.position = new Vector3( 0.2f, 1.3f, 0.3f);
                 AvatarHeadGameObject.transform.position      = new Vector3( 0.0f, 1.5f, 0.0f);
                 AvatarBodyGameObject.transform.position      = new Vector3( 0.0f, 0.8f, 0.0f);
+
+                AvatarLeftHandGameObject.transform.SetParent(mainCamera.transform);
+                AvatarRightHandGameObject.transform.SetParent(mainCamera.transform);
 
                 //PC Components
                 //AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
@@ -113,6 +118,16 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
         SetUpAvatarGameobject(avatarHolder.BodyTransform,avatarInputConverter.AvatarBody);
         SetUpAvatarGameobject(avatarHolder.HandLeftTransform, avatarInputConverter.AvatarHand_Left);
         SetUpAvatarGameobject(avatarHolder.HandRightTransform, avatarInputConverter.AvatarHand_Right);
+
+        if(!CurrentPlatformManager.instance.IsOnQuest())
+        {
+            print("Not on quest");
+            AvatarInputConverter.SetActive(false);
+        }else{
+            print("On quest");
+            AvatarInputConverter.SetActive(true);
+        }
+
     }
 
     void SetUpAvatarGameobject(Transform avatarModelTransform, Transform mainAvatarTransform)
