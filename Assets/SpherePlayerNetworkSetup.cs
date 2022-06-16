@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
 {
     //Scripts for PC
-    public Camera camera;
+    public Camera playerCamera;
     public PCInteractionProvider pCMoveProvider;
     public CameraMouseMovement cameraMouseMovement;
 
@@ -15,13 +15,19 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     {
         if(photonView.IsMine)
         {
-            camera.enabled = true;
+            playerCamera.enabled = true;
             pCMoveProvider.enabled = true;
             cameraMouseMovement.enabled = true;
+
+            gameObject.AddComponent<AudioListener>();
         }
         else
         {
-            camera.enabled = false;
+            //Change their layers so the local player can see other people's bodies
+            SetLayerRecursively(gameObject, 12 );
+            SetLayerRecursively(gameObject, 12 );
+
+            playerCamera.enabled = false;
             pCMoveProvider.enabled = false;
             cameraMouseMovement.enabled = false;
         }
@@ -31,5 +37,14 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     void Update()
     {
        
+    }
+
+    void SetLayerRecursively(GameObject go, int layerNumber)
+    {
+        if (go == null) return;
+        foreach (Transform trans in go.GetComponentsInChildren<Transform>(true))
+        {
+            trans.gameObject.layer = layerNumber;
+        }
     }
 }
