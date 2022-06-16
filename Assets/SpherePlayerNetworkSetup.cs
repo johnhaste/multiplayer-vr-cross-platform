@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
 
 public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
@@ -26,9 +27,38 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     {
         if(photonView.IsMine)
         {
-            playerCamera.enabled = true;
-            pCMoveProvider.enabled = true;
-            cameraMouseMovement.enabled = true;
+            //Check if it's on PC or Quest
+            if(!CurrentPlatformManager.instance.IsOnQuest())
+            {
+                //Remove VR Components
+                LocalXRRigGameobject.SetActive(false);
+
+                //Adjust Player Hands and Body
+                AvatarLeftHandGameObject.transform.position  = new Vector3(-0.2f, 0.8f, 0.3f);
+                AvatarRightHandGameObject.transform.position = new Vector3( 0.2f, 0.8f, 0.3f);
+                AvatarHeadGameObject.transform.position      = new Vector3( 0.0f, 1.5f, 0.0f);
+                AvatarBodyGameObject.transform.position      = new Vector3( 0.0f, 0.8f, 0.0f);
+
+                //PC Components
+                //AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
+                //CameraOffset.transform.position = new Vector3(0f,1f,0f);     
+                playerCamera.enabled = true;
+                pCMoveProvider.enabled = true;
+                cameraMouseMovement.enabled = true;
+            }
+            else
+            {
+                //VR Components
+                //GetComponent<SphereCollider>().enabled = false;
+                LocalXRRigGameobject.SetActive(true);
+
+                //PC Components
+                //AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
+                //CameraOffset.transform.position = new Vector3(0f,1f,0f);     
+                playerCamera.enabled = false;
+                pCMoveProvider.enabled = false;
+                cameraMouseMovement.enabled = false;
+            }           
 
             //Loading correct avatar model
             object avatarSelectionNumber;
@@ -41,7 +71,10 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
             gameObject.AddComponent<AudioListener>();
         }
         else
-        {
+        {  
+
+            LocalXRRigGameobject.SetActive(false);   
+
             //Change their layers so the local player can see other people's bodies
             SetLayerRecursively(gameObject, 12 );
 
