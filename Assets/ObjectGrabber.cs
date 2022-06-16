@@ -12,7 +12,7 @@ public class ObjectGrabber : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        print("Grab Detector:" + col.name);
+        //print("Grab Detector:" + col.name);
 
         if(col.name.Contains("Gun") && !isGrabbingGun)
         {

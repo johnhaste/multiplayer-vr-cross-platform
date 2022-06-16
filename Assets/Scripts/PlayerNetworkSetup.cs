@@ -44,12 +44,11 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     {
         if(photonView.IsMine)
         {
-            
-            //transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
+            transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
 
             //Check if it's on PC or Quest
-            if(!CurrentPlatformManager.instance.IsOnQuest()){
-
+            if(!CurrentPlatformManager.instance.IsOnQuest())
+            {
                 //Remove VR Components
                 LocalXRRigGameobject.GetComponent<AvatarInputConverter>().enabled = false;
                 LocalXRRigGameobject.GetComponent<LocomotionSystem>().enabled = false;
@@ -58,8 +57,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
                 //Adjust Player Hands and Body
                 AvatarLeftHandGameObject.transform.position  = new Vector3(-0.2f, 0.8f, 0.3f);
                 AvatarRightHandGameObject.transform.position = new Vector3( 0.2f, 0.8f, 0.3f);
-                AvatarHeadGameObject.transform.position      = new Vector3( 0.5f, 0.8f, 0f  );
-                AvatarBodyGameObject.transform.position      = new Vector3( 0.5f, 0f  , 0f  );
+                AvatarHeadGameObject.transform.position      = new Vector3( 0.0f, 0.8f, 0.0f);
+                AvatarBodyGameObject.transform.position      = new Vector3( 0.0f, 0.0f, 0.0f);
 
                 //PC Components
                 AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
@@ -74,6 +73,7 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
 
             //Loading correct avatar model
             object avatarSelectionNumber;
+            
             if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(MultiplayerVRConstants.AVATAR_SELECTION_NUMBER, out avatarSelectionNumber))
             {
                 print("Avatar selection number:" + (int) avatarSelectionNumber);
@@ -100,8 +100,11 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
             
             MainAvatarGameObject.AddComponent<AudioListener>();
 
-        }else
+        }
+        else
         {
+            print("não é meu");
+
             //The player is remote (disable XR Rig)
             LocalXRRigGameobject.SetActive(false);
 

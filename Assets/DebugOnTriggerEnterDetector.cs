@@ -6,6 +6,6 @@ public class DebugOnTriggerEnterDetector : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        print("Grab Detector:" + col.name);
+        //print("Grab Detector:" + col.name);
     }
 }
