@@ -15617,7 +15617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1142187802
 Transform:
   m_ObjectHideFlags: 0
@@ -16609,6 +16609,7 @@ Transform:
   - {fileID: 1142187802}
   - {fileID: 1302962034}
   - {fileID: 54447883}
+  - {fileID: 1918181619}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21774,6 +21775,7 @@ Transform:
   - {fileID: 1725813757}
   - {fileID: 800788425}
   - {fileID: 1559466563}
+  - {fileID: 2650796950747409639}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24816,6 +24818,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8938639886210421350, guid: f0662d655d41ee74383aa11d28d35927, type: 3}
   m_PrefabInstance: {fileID: 1916502879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1918181618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918181619}
+  - component: {fileID: 1918181620}
+  m_Layer: 0
+  m_Name: Spawn Sphere Player Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1918181619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918181618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1243060538}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918181620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918181618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbeeaa46089f8c34e85785fff546c4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sphere: {fileID: 2650796951104505213, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1924139667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27202,6 +27250,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c2455ae1e61a7e4f86b59219e0448c3, type: 3}
+--- !u!1001 &2650796950747409638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1673591997}
+    m_Modifications:
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.6326876
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.914346
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7509062
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505211, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505213, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_Name
+      value: SphereTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 2650796951104505213, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+--- !u!4 &2650796950747409639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2650796951104505159, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+  m_PrefabInstance: {fileID: 2650796950747409638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &2676602457150284891
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27291,7 +27409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574916570975145390, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3574916571952046685, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: m_LocalPosition.z
