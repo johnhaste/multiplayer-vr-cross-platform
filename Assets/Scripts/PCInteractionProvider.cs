@@ -16,7 +16,7 @@ public class PCInteractionProvider : MonoBehaviour
             //Shoot Bullet
             if(Input.GetMouseButtonDown(0) && weaponAttached != null)
             {
-                weaponAttached.gameObject.transform.GetChild(0).GetComponent<Gun>().ShootBullet();
+                weaponAttached.GetComponent<Gun>().ShootBullet();
             }
 
             //MOVEMENT INPUT WASD OR ARROW KEYS

@@ -19,7 +19,7 @@ public class ObjectGrabber : MonoBehaviour
             isGrabbingGun = true;
 
             //Adjusting position and parenting
-            col.transform.position = rightHand.transform.position + new Vector3(0f, -0.2f, 0.3f);
+            col.transform.position = rightHand.transform.position + new Vector3(0f, -0.2f, 0f);
             col.transform.rotation = Quaternion.Euler(rightHand.transform.eulerAngles.x,rightHand.transform.eulerAngles.y,rightHand.transform.eulerAngles.z);
             col.transform.SetParent(rightHand.transform);
 

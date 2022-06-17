@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 6305926719863788586}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6269026733229139264}
@@ -162,7 +162,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1564386643622983978}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -251,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787146697146794705, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.095
       objectReference: {fileID: 0}
     - target: {fileID: 4787146697146794705, guid: e9050f838eb01db44b8958e4d8266866, type: 3}
       propertyPath: m_LocalRotation.w
