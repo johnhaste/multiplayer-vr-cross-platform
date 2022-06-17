@@ -7,8 +7,7 @@ public class EnemySpawner : MonoBehaviour, IPunObservable
 {
     public GameObject[] spawnerPoint;
     public GameObject zombiePrefab;
-    public ParticleSystem fxSpawn;
-    public float timeRate = 10f;
+    public float timeRate = 5f;
     public int enemyCounter;
 
     // Start is called before the first frame update
@@ -22,15 +21,15 @@ public class EnemySpawner : MonoBehaviour, IPunObservable
     {
         while (true)
         {
-            gameObject.GetComponent<PhotonView>().RPC("SpawnZombie", RpcTarget.AllBufferedViaServer);
+            int indexCurrentSpawner = Random.Range(0,spawnerPoint.Length);
+            gameObject.GetComponent<PhotonView>().RPC("SpawnZombie", RpcTarget.AllBufferedViaServer, indexCurrentSpawner);
             yield return new WaitForSeconds(timeRate);
         }
     }
 
     [PunRPC]
-    public void SpawnZombie()
+    public void SpawnZombie(int indexCurrentSpawner)
     {
-        int indexCurrentSpawner = Random.Range(0,spawnerPoint.Length);
         spawnerPoint[indexCurrentSpawner].GetComponent<InitialParticleEmission>().PlayChildFX();
         GameObject zombie = Instantiate(zombiePrefab, spawnerPoint[indexCurrentSpawner].transform.position, Quaternion.Euler(0, 0, 0)) as GameObject;
             

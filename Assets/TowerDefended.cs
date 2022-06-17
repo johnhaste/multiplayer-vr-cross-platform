@@ -7,7 +7,8 @@ using Photon.Pun;
 public class TowerDefended : MonoBehaviour, IPunObservable
 {
     public TextMeshProUGUI healthText;
-    private int towerLives = 20;
+    private int towerLives = 5;
+    public GameObject fireParticleGameObject;
 
     public static TowerDefended instance;
     private void Awake()
@@ -29,10 +30,11 @@ public class TowerDefended : MonoBehaviour, IPunObservable
     [PunRPC]
     public void LoseLive()
     {
-        if(towerLives > 0)
+        if(towerLives > 1)
         {
             towerLives--;
             UpdateLivesGUI();
+            UpdateFireSize();
         }
         else
         {
@@ -44,11 +46,24 @@ public class TowerDefended : MonoBehaviour, IPunObservable
     void UpdateLivesGUI()
     {
         healthText.text = towerLives+"";
+        UpdateFireSize();
+    }
+
+    void UpdateFireSize()
+    {
+        fireParticleGameObject.transform.localScale = new Vector3((float) towerLives/10, (float) towerLives/10,(float) towerLives/10);
     }
 
     void Die()
     {
-       healthText.text = "You Lost!"; 
+       healthText.text = "Score:" + ScoreManager.instance.score; 
+       StartCoroutine("WaitAndRestartGame");
+    }
+
+    IEnumerator WaitAndRestartGame()
+    {
+        yield return new WaitForSeconds(3f);
+        PhotonNetwork.LoadLevel("HomeScene");
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)

@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour, IPunObservable
         }
         else
         {
-            //ScoreManager.instance.GetComponent<PhotonView>().RPC("AddScore", RpcTarget.AllBufferedViaServer,50);
+            ScoreManager.instance.GetComponent<PhotonView>().RPC("AddScore", RpcTarget.AllBufferedViaServer,50);
             GetComponent<FollowObject>().enabled = false;
             DestroyHealthUI();
             Die();
