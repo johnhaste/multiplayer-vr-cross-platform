@@ -451,6 +451,7 @@ Transform:
   m_Children:
   - {fileID: 1581923116565510320}
   - {fileID: 222685587859761698}
+  - {fileID: 8871607997591968981}
   - {fileID: 2000682817700713539}
   - {fileID: 8389346036753638712}
   m_Father: {fileID: 0}
@@ -1189,7 +1190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8871607997591968981
 Transform:
   m_ObjectHideFlags: 0
@@ -1202,8 +1203,8 @@ Transform:
   m_LocalScale: {x: 1.8656, y: 2.0955412, z: 3.7312}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8389346036753638712}
-  m_RootOrder: 4
+  m_Father: {fileID: 2650796951104505159}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8460649958046498571
 MeshFilter:
@@ -1292,8 +1293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eacfea7b152916442a1154a72ddf3593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHand: {fileID: 0}
-  pCInteractionProvider: {fileID: 0}
+  rightHand: {fileID: 2646677823363392824}
+  pCInteractionProvider: {fileID: 4423128100797344911}
   customBaseControllerManagerRight: {fileID: 7901684824500369264}
 --- !u!1 &3505388042940645324
 GameObject:
@@ -1624,9 +1625,8 @@ Transform:
   - {fileID: 4127097018536042456}
   - {fileID: 1618811366770710818}
   - {fileID: 1253088522243314732}
-  - {fileID: 8871607997591968981}
   m_Father: {fileID: 2650796951104505159}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6854591095898170961
 MonoBehaviour:
@@ -1859,7 +1859,7 @@ Transform:
   - {fileID: 919764586325085144}
   - {fileID: 487439536510216302}
   m_Father: {fileID: 2650796951104505159}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6054902022960606048
 GameObject:
