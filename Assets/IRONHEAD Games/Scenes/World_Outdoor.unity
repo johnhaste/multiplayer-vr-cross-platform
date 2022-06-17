@@ -622,6 +622,7 @@ Transform:
   - {fileID: 1265667410}
   - {fileID: 369325647}
   - {fileID: 153726145}
+  - {fileID: 1254428133}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4443,7 +4444,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 650984523}
-  - {fileID: 1254428133}
   m_Father: {fileID: 62719656}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9336,17 +9336,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690110553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -19.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.043773524}
+  m_LocalScale: {x: 0.33671665, y: 0.33671665, z: 0.33671665}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1679865283}
-  m_Father: {fileID: 1254428133}
-  m_RootOrder: 3
+  m_Father: {fileID: 174955765}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -21.69, y: 7.66}
+  m_AnchoredPosition: {x: -0.010105133, y: 0.53201294}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690110555
@@ -17037,9 +17037,8 @@ Transform:
   - {fileID: 174955765}
   - {fileID: 1120841852}
   - {fileID: 1733674558}
-  - {fileID: 690110554}
-  m_Father: {fileID: 369325647}
-  m_RootOrder: 1
+  m_Father: {fileID: 62719656}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1257632215
 PrefabInstance:
@@ -23098,7 +23097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1685262095790393608, guid: 67ba5864b6ec20441a8243de97b959c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2393690872585829147, guid: 67ba5864b6ec20441a8243de97b959c3, type: 3}
       propertyPath: m_RootOrder
@@ -25655,8 +25654,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.66948277, y: 0.43602368, z: 0.67011046}
-  m_Center: {x: 0.0010684399, y: 0.16055267, z: 0.044629265}
+  m_Size: {x: 0.31829268, y: 0.43602368, z: 0.31314987}
+  m_Center: {x: 0.07997858, y: 0.16055267, z: 0.056830786}
+--- !u!114 &1961498502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961498498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f3bda536dd8ed4b8af50d7e3bedb93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 1679865284}
+  towerLives: 5
 --- !u!1001 &1966287873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27692,7 +27705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574916570975145391, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: timeRate
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3574916571952046685, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: m_LocalPosition.z
