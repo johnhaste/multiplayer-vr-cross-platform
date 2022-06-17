@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class PCInteractionProvider : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class PCInteractionProvider : MonoBehaviour
             //Shoot Bullet
             if(Input.GetMouseButtonDown(0) && weaponAttached != null)
             {
-                weaponAttached.GetComponent<Gun>().ShootBullet();
+                weaponAttached.GetComponent<PhotonView>().RPC("ShootBullet", RpcTarget.AllBufferedViaServer);
+                //weaponAttached.GetComponent<Gun>().ShootBullet();
             }
 
             //MOVEMENT INPUT WASD OR ARROW KEYS
