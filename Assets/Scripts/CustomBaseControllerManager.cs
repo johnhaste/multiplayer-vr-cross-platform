@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Photon.Pun;
 
 public class CustomBaseControllerManager : MonoBehaviour
 {
@@ -17,10 +18,9 @@ public class CustomBaseControllerManager : MonoBehaviour
 
     private void ShootCurrentGun(InputAction.CallbackContext obj)
     {
-        print("Shoot");
         if(weaponAttached != null)
         {
-            weaponAttached.gameObject.transform.GetChild(0).GetComponent<Gun>().ShootBullet();
+           weaponAttached.GetComponent<PhotonView>().RPC("ShootBullet", RpcTarget.AllBufferedViaServer);
         }
 
     }

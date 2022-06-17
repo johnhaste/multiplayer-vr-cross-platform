@@ -18,6 +18,9 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject AvatarInputConverter;
     public GameObject[] AvatarModelPrefabs;
 
+    //Grab Detector
+    public GameObject grabDetector;
+
     //Scripts for PC
     public GameObject mainCamera;
     public Camera playerCamera;
@@ -56,6 +59,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
                 //VR Components
                 //GetComponent<SphereCollider>().enabled = false;
                 LocalXRRigGameobject.SetActive(true);
+                grabDetector.transform.SetParent(LocalXRRigGameobject.transform);
 
                 //PC Components
                 //AvatarFullBody.transform.parent = LocalXRRigGameobject.transform;
@@ -78,7 +82,15 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
         else //Not your player
         {  
 
-            LocalXRRigGameobject.SetActive(false);
+            //Check if it's on PC or Quest
+            if(CurrentPlatformManager.instance.IsOnQuest())
+            {
+                grabDetector.transform.SetParent(LocalXRRigGameobject.transform);
+            }
+            else
+            {
+                LocalXRRigGameobject.SetActive(false);
+            }
 
             //Adjust Player Hands and Body
             //AvatarHeadGameObject.transform.position      = new Vector3( 0.0f, 1.5f, 0.0f);
@@ -86,9 +98,8 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
             //AvatarLeftHandGameObject.transform.position  = AvatarBodyGameObject.transform.position;
             //AvatarRightHandGameObject.transform.position = AvatarBodyGameObject.transform.position;
 
-
-            //AvatarLeftHandGameObject.transform.SetParent(mainCamera.transform);
-            //AvatarRightHandGameObject.transform.SetParent(mainCamera.transform);   
+            AvatarLeftHandGameObject.transform.SetParent(mainCamera.transform);
+            AvatarRightHandGameObject.transform.SetParent(mainCamera.transform);   
 
             //Change their layers so the local player can see other people's bodies
             SetLayerRecursively(gameObject, 12 );
