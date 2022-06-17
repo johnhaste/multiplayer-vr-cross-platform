@@ -51,7 +51,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
                 pCMoveProvider.enabled = true;
                 cameraMouseMovement.enabled = true;
             }
-            else
+            else //On quest
             {
                 //VR Components
                 //GetComponent<SphereCollider>().enabled = false;
@@ -75,10 +75,20 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
 
             gameObject.AddComponent<AudioListener>();
         }
-        else
+        else //Not your player
         {  
 
-            LocalXRRigGameobject.SetActive(false);   
+            LocalXRRigGameobject.SetActive(false);
+
+            //Adjust Player Hands and Body
+            //AvatarHeadGameObject.transform.position      = new Vector3( 0.0f, 1.5f, 0.0f);
+            //AvatarBodyGameObject.transform.position      = new Vector3( 0.0f, 0.8f, 0.0f);
+            //AvatarLeftHandGameObject.transform.position  = AvatarBodyGameObject.transform.position;
+            //AvatarRightHandGameObject.transform.position = AvatarBodyGameObject.transform.position;
+
+
+            //AvatarLeftHandGameObject.transform.SetParent(mainCamera.transform);
+            //AvatarRightHandGameObject.transform.SetParent(mainCamera.transform);   
 
             //Change their layers so the local player can see other people's bodies
             SetLayerRecursively(gameObject, 12 );

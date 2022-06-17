@@ -7528,6 +7528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1673591997}
     m_Modifications:
+    - target: {fileID: 1111546724139314055, guid: a5f6f0e9cdcfe0f4bb7d851dc6745073, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3251227458533158127, guid: a5f6f0e9cdcfe0f4bb7d851dc6745073, type: 3}
       propertyPath: sceneViewId
       value: 6
@@ -7575,6 +7579,10 @@ PrefabInstance:
     - target: {fileID: 3597294022149665314, guid: a5f6f0e9cdcfe0f4bb7d851dc6745073, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5965433376377268468, guid: a5f6f0e9cdcfe0f4bb7d851dc6745073, type: 3}
+      propertyPath: sceneViewId
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6122829052827839440, guid: a5f6f0e9cdcfe0f4bb7d851dc6745073, type: 3}
       propertyPath: m_Name
@@ -27506,6 +27514,14 @@ PrefabInstance:
     - target: {fileID: 2650796951104505213, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390328004428665862, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929588060440783831, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: sceneViewId
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
