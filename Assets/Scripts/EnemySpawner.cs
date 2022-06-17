@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour, IPunObservable
     public GameObject[] spawnerPoint;
     public GameObject zombiePrefab;
     public ParticleSystem fxSpawn;
-    public float timeRate = 5f;
+    public float timeRate = 10f;
     public int enemyCounter;
 
     // Start is called before the first frame update

@@ -1697,8 +1697,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2.0000005, z: 8.595359}
-  m_Center: {x: 0.00000016380699, y: -0.00000047683713, z: 2.2504234}
+  m_Size: {x: 1.0000001, y: 2.0699337, z: 8.595359}
+  m_Center: {x: 0.00000016441443, y: -0.034966756, z: 2.2504234}
 --- !u!114 &869044156816742248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,3 +1712,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3436433028594109494}
+  zombieParent: {fileID: 6872480779792985637}

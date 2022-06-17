@@ -25655,8 +25655,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9282567, y: 0.3466322, z: 0.8339487}
-  m_Center: {x: 0.0705868, y: 0.11585675, z: 0.02741529}
+  m_Size: {x: 0.66948277, y: 0.43602368, z: 0.67011046}
+  m_Center: {x: 0.0010684399, y: 0.16055267, z: 0.044629265}
 --- !u!1001 &1966287873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27515,6 +27515,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3823042441239009200, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4390328004428665862, guid: 7a218d7776ca2d24590541c57da2e32c, type: 3}
       propertyPath: sceneViewId
       value: 11
@@ -27684,7 +27688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3574916570975145390, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3574916570975145391, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
+      propertyPath: timeRate
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3574916571952046685, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
       propertyPath: m_LocalPosition.z

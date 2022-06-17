@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class FieldOfAttack : MonoBehaviour
 {
     public Enemy enemy;
+    public GameObject zombieParent;
 
     void OnTriggerEnter(Collider col)
     {
@@ -13,11 +15,12 @@ public class FieldOfAttack : MonoBehaviour
         {
            enemy.AttackPlayer(col.gameObject);
         }
-
       
         if(col.name == "FirePlace")
         {
-            GetComponent<Enemy>().LoseHealth(100);
+            print("Zombie on fire");
+            //GetComponent<Enemy>().LoseHealth(100);
+            zombieParent.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 100);
         }
     }
 }
