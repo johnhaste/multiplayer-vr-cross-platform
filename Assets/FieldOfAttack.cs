@@ -20,8 +20,8 @@ public class FieldOfAttack : MonoBehaviour
         {
             print("Zombie on fire");
             //GetComponent<Enemy>().LoseHealth(100);
-            zombieParent.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 100);
-            col.GetComponent<TowerDefended>().LoseLive();
+            zombieParent.GetComponent<PhotonView>().RPC("BurnEnemy", RpcTarget.AllBufferedViaServer);
+            col.GetComponent<PhotonView>().RPC("LoseLive", RpcTarget.AllBufferedViaServer);
         }
     }
 }
