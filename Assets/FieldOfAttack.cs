@@ -19,7 +19,6 @@ public class FieldOfAttack : MonoBehaviour
         if(col.name == "FirePlace")
         {
             print("Zombie on fire");
-            //GetComponent<Enemy>().LoseHealth(100);
             zombieParent.GetComponent<PhotonView>().RPC("BurnEnemy", RpcTarget.AllBufferedViaServer);
             col.GetComponent<PhotonView>().RPC("LoseLive", RpcTarget.AllBufferedViaServer);
         }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
+public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservable
 {
     //XR Rig
     public GameObject LocalXRRigGameobject;
@@ -18,6 +19,11 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     public GameObject AvatarInputConverter;
     public GameObject[] AvatarModelPrefabs;
 
+    //Health
+    public int health;
+    public Image healthBar;
+    public GameObject canvasRedBlink;
+
     //Grab Detector
     public GameObject grabDetector;
 
@@ -30,6 +36,8 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        canvasRedBlink.gameObject.SetActive(false);
+
         if(photonView.IsMine)
         {
             //Check if it's on PC or Quest
@@ -81,6 +89,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
         }
         else //Not your player
         {  
+            
 
             //Check if it's on PC or Quest
             if(CurrentPlatformManager.instance.IsOnQuest())
@@ -105,6 +114,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
 
             //Change their layers so the local player can see other people's bodies
             SetLayerRecursively(gameObject, 12 );
+            SetLayerRecursively(canvasRedBlink, 14 );
 
             playerCamera.enabled = false;
             pCMoveProvider.enabled = false;
@@ -112,10 +122,29 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    [PunRPC]
+    public void LoseHealth(int damage)
     {
-       
+        StartCoroutine("BlinkRedCanvas");
+
+        if(health > 0)
+        {    
+            health -= damage;
+            UpdateHealthUI();
+        }
+        else
+        {
+            DestroyHealthUI();
+            Die();
+        }
+        
+    }
+
+    IEnumerator BlinkRedCanvas()
+    {
+        canvasRedBlink.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        canvasRedBlink.gameObject.SetActive(false);
     }
 
     [PunRPC]
@@ -167,5 +196,35 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
         {
             trans.gameObject.layer = layerNumber;
         }
+    }
+
+    public void UpdateHealthUI()
+    {
+        healthBar.rectTransform.sizeDelta = new Vector2( (float) health/10, 0.1f); 
+    }
+
+    public void DestroyHealthUI()
+    {
+        Destroy(healthBar);
+    }
+
+    public void Die()
+    {
+        health = 0;
+        MainAvatarGameObject.transform.rotation =  Quaternion.Euler(90f,0f,90f);
+        LocalXRRigGameobject.SetActive(false);
+        pCMoveProvider.enabled = false;
+        StartCoroutine("WaitAndDie"); 
+    }
+
+    IEnumerator WaitAndDie()
+    {
+        yield return new WaitForSeconds(2f);
+        //PhotonNetwork.LoadLevel("HomeScene");
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        //throw new System.NotImplementedException();
     }
 }

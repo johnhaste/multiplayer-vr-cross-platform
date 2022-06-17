@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour, IPunObservable
     public GameObject fieldOfView;
     public bool isWalking;
 
+    //Main Turret Target
+    public GameObject mainTarget;
+
     //Health
     public int health;
     public TextMeshProUGUI healthText;
@@ -47,7 +50,7 @@ public class Enemy : MonoBehaviour, IPunObservable
         {
             animator.SetBool("isWalking", isWalking);
         }
-        
+
     }
 
     [PunRPC]
@@ -100,6 +103,7 @@ public class Enemy : MonoBehaviour, IPunObservable
     public void AttackPlayer(GameObject player)
     {
         Attack();
+        MeasureDamage(player);
         StartCoroutine("WaitAndLookForPlayer", player);
     }
 
@@ -111,6 +115,15 @@ public class Enemy : MonoBehaviour, IPunObservable
         StartCoroutine("WaitAndWalk", player); 
     }
 
+    public void MeasureDamage(GameObject player)
+    {
+        float distanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if(distanceFromPlayer < 1f)
+        {
+            player.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 1);
+        }
+    }
+
     IEnumerator WaitAndDie()
     {
         yield return new WaitForSeconds(2f);
@@ -119,16 +132,18 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     IEnumerator WaitAndLookForPlayer(GameObject player)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         
-        //se estiver próximo do player ataca de novo
+        //If it's close to the player, attacks again
         if(ComparePositions.IsClose(gameObject, player, 1f))
         {
             AttackPlayer(player);
         }
-        else
+        else //if it's far from the player, gets back to its route
         {
             isWalking = true;
+            GetComponent<FollowObject>().ChangeTarget(GameObject.Find("InitialTarget"));
+
         }
     }
 
