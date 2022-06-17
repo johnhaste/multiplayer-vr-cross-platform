@@ -4,6 +4,7 @@ using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -22,6 +23,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     //Health
     public int health;
     public Image healthBar;
+    public TextMeshProUGUI healthText;
     public GameObject canvasRedBlink;
 
     //Grab Detector
@@ -90,7 +92,6 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
         else //Not your player
         {  
             
-
             //Check if it's on PC or Quest
             if(CurrentPlatformManager.instance.IsOnQuest())
             {
@@ -125,31 +126,34 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     [PunRPC]
     public void LoseHealth(int damage)
     {
-        StartCoroutine("BlinkRedCanvas");
-
-        if(health > 0)
-        {    
-            health -= damage;
-            UpdateHealthUI();
-        }
-        else
+        if(!canvasRedBlink.gameObject.active)
         {
-            DestroyHealthUI();
-            Die();
+            StartCoroutine("BlinkRedCanvas");
+
+            if(health > 0)
+            {    
+                health -= damage;
+                UpdateHealthUI();
+            }
+            else
+            {
+                DestroyHealthUI();
+                Die();
+            }
         }
-        
     }
 
     IEnumerator BlinkRedCanvas()
     {
         canvasRedBlink.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         canvasRedBlink.gameObject.SetActive(false);
     }
 
     [PunRPC]
     public void InitializeSelectedAvatarModel(int avatarSelectionNumber)
     {
+        print("OMG");
         GameObject selectedAvatarGameobject = Instantiate(AvatarModelPrefabs[avatarSelectionNumber], gameObject.transform);
 
         AvatarInputConverter avatarInputConverter = LocalXRRigGameobject.GetComponent<AvatarInputConverter>();
@@ -201,6 +205,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     public void UpdateHealthUI()
     {
         healthBar.rectTransform.sizeDelta = new Vector2( (float) health/10, 0.1f); 
+        healthText.text = health+"";
     }
 
     public void DestroyHealthUI()

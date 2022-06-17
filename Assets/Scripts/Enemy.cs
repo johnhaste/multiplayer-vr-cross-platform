@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour, IPunObservable
     public Animator animator;
     public GameObject fieldOfView;
     public bool isWalking;
+    public bool isAttacking;
 
     //Main Turret Target
     public GameObject mainTarget;
@@ -109,19 +110,23 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     public void Attack()
     {
-        animator.SetTrigger("attack");
+        isAttacking = true;
         isWalking = false;
-        GameObject player = null;
-        StartCoroutine("WaitAndWalk", player); 
+        animator.SetTrigger("attack");
     }
 
     public void MeasureDamage(GameObject player)
     {
-        float distanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if(distanceFromPlayer < 1f)
+        if(isAttacking)
         {
-            player.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 1);
+            isAttacking = false;
+            float distanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
+            if(distanceFromPlayer < 1f)
+            {
+                player.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 1);
+            }
         }
+        
     }
 
     IEnumerator WaitAndDie()
@@ -132,7 +137,7 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     IEnumerator WaitAndLookForPlayer(GameObject player)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         
         //If it's close to the player, attacks again
         if(ComparePositions.IsClose(gameObject, player, 1f))
@@ -150,7 +155,6 @@ public class Enemy : MonoBehaviour, IPunObservable
     IEnumerator WaitAndWalk()
     {
         yield return new WaitForSeconds(1f);
-                
         isWalking = true;
     }
 
