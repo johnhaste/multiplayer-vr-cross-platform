@@ -25,9 +25,8 @@ public class GrabObjectsDetector : MonoBehaviour
             col.transform.parent   = rightHand.transform;
 
             //Get the gun properties
-            col.gameObject.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            col.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         
-
             if(!CurrentPlatformManager.instance.IsOnQuest())
             {
                 //Attaching the gun to the player on PC
@@ -40,8 +39,6 @@ public class GrabObjectsDetector : MonoBehaviour
             }
             
         }
-
-        print("Trigger: "+col.name);
     }
     
 }

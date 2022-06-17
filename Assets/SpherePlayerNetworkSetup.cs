@@ -85,11 +85,13 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks
             //Check if it's on PC or Quest
             if(CurrentPlatformManager.instance.IsOnQuest())
             {
-                grabDetector.transform.SetParent(LocalXRRigGameobject.transform);
+                //grabDetector.transform.SetParent(MainAvatarGameObject.transform);
             }
             else
             {
                 LocalXRRigGameobject.SetActive(false);
+                AvatarLeftHandGameObject.transform.position  = AvatarBodyGameObject.transform.position + new Vector3(-1f,0f,0f);
+                AvatarRightHandGameObject.transform.position = AvatarBodyGameObject.transform.position + new Vector3(1f,0f,0f);;
             }
 
             //Adjust Player Hands and Body
