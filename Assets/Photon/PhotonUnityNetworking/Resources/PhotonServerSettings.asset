@@ -54,6 +54,7 @@ MonoBehaviour:
   - AddScore
   - BurnEnemy
   - LoseLive
+  - UpdateLivesGUI
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

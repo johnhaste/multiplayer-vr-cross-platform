@@ -34,6 +34,6 @@ public class ScoreManager : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }

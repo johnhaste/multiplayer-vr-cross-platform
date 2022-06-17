@@ -7,7 +7,7 @@ using Photon.Pun;
 public class TowerDefended : MonoBehaviour, IPunObservable
 {
     public TextMeshProUGUI healthText;
-    public int towerLives = 5;
+    private int towerLives = 20;
 
     public static TowerDefended instance;
     private void Awake()
@@ -21,10 +21,9 @@ public class TowerDefended : MonoBehaviour, IPunObservable
         DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        towerLives = 5;
+        GetComponent<PhotonView>().RPC("UpdateLivesGUI", RpcTarget.AllBufferedViaServer);
     }
 
     [PunRPC]
@@ -41,6 +40,7 @@ public class TowerDefended : MonoBehaviour, IPunObservable
         }
     }
 
+    [PunRPC]
     void UpdateLivesGUI()
     {
         healthText.text = towerLives+"";
@@ -53,6 +53,6 @@ public class TowerDefended : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 }
