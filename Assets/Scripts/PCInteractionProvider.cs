@@ -21,6 +21,13 @@ public class PCInteractionProvider : MonoBehaviour
                 //weaponAttached.GetComponent<Gun>().ShootBullet();
             }
 
+            //QUIT AND UI
+            if(Input.GetKeyDown(KeyCode.Backspace)) 
+            {  
+                print("Go Home");
+                PhotonNetwork.LoadLevel("HomeScene");
+            }
+
             //MOVEMENT INPUT WASD OR ARROW KEYS
             Vector3 v3 = new Vector3(0f,0f,0f);
         
