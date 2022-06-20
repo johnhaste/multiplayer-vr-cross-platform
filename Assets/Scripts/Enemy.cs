@@ -104,7 +104,6 @@ public class Enemy : MonoBehaviour, IPunObservable
     public void AttackPlayer(GameObject player)
     {
         Attack();
-        MeasureDamage(player);
         StartCoroutine("WaitAndLookForPlayer", player);
     }
 
@@ -115,20 +114,6 @@ public class Enemy : MonoBehaviour, IPunObservable
         animator.SetTrigger("attack");
     }
 
-    public void MeasureDamage(GameObject player)
-    {
-        if(isAttacking)
-        {
-            isAttacking = false;
-            float distanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
-            if(distanceFromPlayer < 1f)
-            {
-                player.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer, 1);
-            }
-        }
-        
-    }
-
     IEnumerator WaitAndDie()
     {
         yield return new WaitForSeconds(2f);
@@ -137,10 +122,10 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     IEnumerator WaitAndLookForPlayer(GameObject player)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         
         //If it's close to the player, attacks again
-        if(ComparePositions.IsClose(gameObject, player, 1f))
+        if(ComparePositions.IsClose(gameObject, player, 2f))
         {
             AttackPlayer(player);
         }
@@ -148,7 +133,6 @@ public class Enemy : MonoBehaviour, IPunObservable
         {
             isWalking = true;
             GetComponent<FollowObject>().ChangeTarget(GameObject.Find("InitialTarget"));
-
         }
     }
 

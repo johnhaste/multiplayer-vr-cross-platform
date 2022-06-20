@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
@@ -42,6 +43,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
     // When the player is spawned
     void Start()
     {
+        GetComponent<PhotonView>().RPC("UpdateLivesGUI", RpcTarget.AllBufferedViaServer);
+
         if(photonView.IsMine)
         {
             transform.position = new Vector3(PhotonNetwork.CurrentRoom.PlayerCount, 0f, 0f);
@@ -148,4 +151,6 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         avatarModelTransform.localPosition = Vector3.zero;
         avatarModelTransform.localRotation = Quaternion.identity;
     }
+
+    
 }

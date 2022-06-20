@@ -42,6 +42,6 @@ public class ObjectGrabber : MonoBehaviour
             
         }
 
-        print("Trigger: "+col.name);
+        //print("Trigger: "+col.name);
     }
 }

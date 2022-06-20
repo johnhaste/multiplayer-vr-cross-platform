@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 8123860602892240067}
   - component: {fileID: 2000584497299777172}
   - component: {fileID: 3357138887327102410}
+  - component: {fileID: 2822064572337888795}
   m_Layer: 0
   m_Name: AttackCube
   m_TagString: Untagged
@@ -138,8 +139,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4049553917016164656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.118, y: 0.56908715, z: 0.349}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0.118, y: 0.56908715, z: 0.492}
+  m_LocalScale: {x: 0.78285, y: 0.78285, z: 0.78285}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6866377078767225841}
@@ -203,11 +204,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4049553917016164656}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2822064572337888795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049553917016164656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6806505a5f79ae4aaec17fa6a0c42ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5116765036658024578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1619,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2835997237871268514}
   - {fileID: 3436433028594109494}
-  sceneViewId: 14
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &2835997237871268514

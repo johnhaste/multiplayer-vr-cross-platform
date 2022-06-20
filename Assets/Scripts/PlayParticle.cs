@@ -17,7 +17,7 @@ public class PlayParticle : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W))
         {
-            print("Play");
+            //print("Play");
             particleSystem.Play();
         }
     }

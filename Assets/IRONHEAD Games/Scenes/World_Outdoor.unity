@@ -7935,7 +7935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxSpawn: {fileID: 339446827}
-  duration: 5
 --- !u!1001 &606146874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13606,7 +13605,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxSpawn: {fileID: 975065519}
-  duration: 5
 --- !u!4 &1005132118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3574916570415346431, guid: bb0834a1e05f0d04d88736f0f74d3d1a, type: 3}
@@ -24598,7 +24596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fxSpawn: {fileID: 1453536304}
-  duration: 5
 --- !u!1001 &1863272106
 PrefabInstance:
   m_ObjectHideFlags: 0

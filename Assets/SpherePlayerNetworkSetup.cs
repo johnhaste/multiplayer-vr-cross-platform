@@ -153,7 +153,6 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     [PunRPC]
     public void InitializeSelectedAvatarModel(int avatarSelectionNumber)
     {
-        print("OMG");
         GameObject selectedAvatarGameobject = Instantiate(AvatarModelPrefabs[avatarSelectionNumber], gameObject.transform);
 
         AvatarInputConverter avatarInputConverter = LocalXRRigGameobject.GetComponent<AvatarInputConverter>();
