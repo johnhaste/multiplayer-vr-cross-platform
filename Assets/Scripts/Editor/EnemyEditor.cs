@@ -15,10 +15,5 @@ public class EnemyEditor : Editor
         {
             enemy.LoseHealth(1);
         }
-
-        if(GUILayout.Button("Attack"))
-        {
-            enemy.Attack();
-        }
     }
 }

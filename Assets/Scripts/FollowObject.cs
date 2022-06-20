@@ -31,10 +31,12 @@ public class FollowObject : MonoBehaviour
                 transform.position += transform.forward*speed*Time.deltaTime;   
             }
     
+            /*
             if(Vector3.Distance(transform.position,targetPosition.position) < 1f)
             {
                 GetComponent<Enemy>().Attack();
             } 
+            */
         }
         
     }

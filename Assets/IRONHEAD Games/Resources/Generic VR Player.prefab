@@ -2630,9 +2630,6 @@ MonoBehaviour:
   grabObjectsDetector: {fileID: 8415714438379696373}
   CameraOffset: {fileID: 8518650641200913992}
   PlayerNameText: {fileID: 3641814812762514149}
-  health: 10
-  healthText: {fileID: 2973024091184931888}
-  healthBar: {fileID: 289376020420980201}
 --- !u!114 &8953795126740577911
 MonoBehaviour:
   m_ObjectHideFlags: 0

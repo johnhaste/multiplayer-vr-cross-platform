@@ -103,15 +103,14 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     public void AttackPlayer(GameObject player)
     {
-        Attack();
+        if(!isAttacking)
+        {
+            isAttacking = true;
+            isWalking = false;
+            animator.SetTrigger("attack");
+        }
+        
         StartCoroutine("WaitAndLookForPlayer", player);
-    }
-
-    public void Attack()
-    {
-        isAttacking = true;
-        isWalking = false;
-        animator.SetTrigger("attack");
     }
 
     IEnumerator WaitAndDie()
@@ -123,14 +122,16 @@ public class Enemy : MonoBehaviour, IPunObservable
     IEnumerator WaitAndLookForPlayer(GameObject player)
     {
         yield return new WaitForSeconds(2f);
-        
+
         //If it's close to the player, attacks again
-        if(ComparePositions.IsClose(gameObject, player, 2f))
+        if(ComparePositions.IsClose(gameObject, player, 3f))
         {
+            isAttacking = false;
             AttackPlayer(player);
         }
         else //if it's far from the player, gets back to its route
         {
+            isAttacking = false;
             isWalking = true;
             GetComponent<FollowObject>().ChangeTarget(GameObject.Find("InitialTarget"));
         }
