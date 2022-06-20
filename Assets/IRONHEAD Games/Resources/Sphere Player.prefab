@@ -740,7 +740,7 @@ MonoBehaviour:
   - {fileID: 1728414061110574811, guid: e8090dbb771374144a023faf37db10eb, type: 3}
   - {fileID: 5701194048334369547, guid: 47133d67b3a40f04eb97e5089982ea39, type: 3}
   - {fileID: 3653637840890810929, guid: 089d38c2beff1f044b446797593d7269, type: 3}
-  health: 5
+  health: 10
   healthBar: {fileID: 4099476798858433324}
   healthText: {fileID: 2072039877335897468}
   canvasRedBlink: {fileID: 9098398928948593046}
@@ -3313,7 +3313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5
+  m_text: '10
 
 '
   m_isRightToLeft: 0
@@ -3615,7 +3615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6324350451209768729
 RectTransform:
   m_ObjectHideFlags: 0
