@@ -43,6 +43,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     void Start()
     {
         canvasRedBlink.gameObject.SetActive(false);
+        UpdateHealthUI();
 
         if(photonView.IsMine)
         {

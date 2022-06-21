@@ -67,6 +67,7 @@ public class Enemy : MonoBehaviour, IPunObservable
         {
             ScoreManager.instance.GetComponent<PhotonView>().RPC("AddScore", RpcTarget.AllBufferedViaServer,50);
             GetComponent<FollowObject>().enabled = false;
+            isWalking = false;
             DestroyHealthUI();
             Die();
         }
@@ -116,7 +117,7 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     IEnumerator WaitAndDie()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
 
