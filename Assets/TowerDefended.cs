@@ -57,6 +57,7 @@ public class TowerDefended : MonoBehaviour, IPunObservable
     void Die()
     {
        healthText.text = "Score:" + ScoreManager.instance.score; 
+       GameStateManager.instance.currentGameState = GameStateManager.gameState.ENDGAME;
        //StartCoroutine("WaitAndRestartGame");
     }
 

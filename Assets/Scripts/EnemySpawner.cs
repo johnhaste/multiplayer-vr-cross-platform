@@ -29,6 +29,14 @@ public class EnemySpawner : MonoBehaviour, IPunObservable
         }
     }
 
+    void Update()
+    {
+        if(GameStateManager.instance.currentGameState == GameStateManager.gameState.ENDGAME)
+        {
+            StopAllCoroutines();
+        }
+    }
+
     [PunRPC]
     public void SpawnZombie(int indexCurrentSpawner)
     {
