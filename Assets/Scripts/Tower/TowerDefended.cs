@@ -7,7 +7,7 @@ using Photon.Pun;
 public class TowerDefended : MonoBehaviour, IPunObservable
 {
     public TextMeshProUGUI healthText;
-    private int towerLives = 20;
+    private int towerLives = 10;
     public GameObject fireParticleGameObject;
 
     public static TowerDefended instance;

@@ -121,6 +121,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
             //Change their layers so the local player can see other people's bodies
             SetLayerRecursively(gameObject, 12 );
             SetLayerRecursively(canvasRedBlink, 14 );
+            SetLayerRecursively(canvasBlackRestart, 14 );
 
             playerCamera.enabled = false;
             pCMoveProvider.enabled = false;
@@ -143,7 +144,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
             else
             {
                 DestroyHealthUI();
-                Die();
+                photonView.RPC("Die", RpcTarget.AllBuffered);
             }
         }
     }
@@ -217,6 +218,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
         Destroy(healthBar);
     }
 
+    [PunRPC]
     public void Die()
     {
         health = 0;
@@ -227,9 +229,8 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     IEnumerator WaitAndDie()
     {
         //Disable Movement
-        print("Wait and die");
-        pCMoveProvider.enabled = false;
-        cameraMouseMovement.enabled = false;
+        //pCMoveProvider.enabled = false;
+        //cameraMouseMovement.enabled = false;
         //LocalXRRigGameobject.SetActive(false);
 
         //Canvas
@@ -240,6 +241,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
         yield return new WaitForSeconds(1f);
         restartCountdownText.text = 1+"";
         yield return new WaitForSeconds(1f);
+
         PhotonNetwork.LoadLevel("HomeScene");
     }
 
