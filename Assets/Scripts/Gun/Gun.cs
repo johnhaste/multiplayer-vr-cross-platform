@@ -17,6 +17,10 @@ public class Gun : MonoBehaviour, IPunObservable
     {
         GameObject bullet = Instantiate(projectile, spawnPoint.transform.position, Quaternion.identity) as GameObject;
 
+        //Plays the sound at that position
+        AudioSource music = GetComponent<AudioSource>();
+		music.Play();
+
         bullet.transform.rotation =  Quaternion.Euler(transform.eulerAngles.x,transform.eulerAngles.y,transform.eulerAngles.z);
 
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * projectileSpeed);
