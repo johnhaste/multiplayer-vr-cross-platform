@@ -622,7 +622,6 @@ Transform:
   - {fileID: 1265667410}
   - {fileID: 369325647}
   - {fileID: 153726145}
-  - {fileID: 1254428133}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16557,6 +16556,7 @@ Transform:
   - {fileID: 1918181619}
   - {fileID: 1062954324}
   - {fileID: 1665507335}
+  - {fileID: 1254428133}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16870,7 +16870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254428133}
   m_Layer: 0
-  m_Name: Fire
+  m_Name: TowerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16884,15 +16884,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254428132}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 20.46461, y: -4.2985783, z: -24.65569}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 174955765}
   - {fileID: 1120841852}
   - {fileID: 1733674558}
-  m_Father: {fileID: 62719656}
-  m_RootOrder: 6
+  m_Father: {fileID: 1243060538}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1257632215
 PrefabInstance:

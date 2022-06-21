@@ -8297,6 +8297,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomOptions__ctor_m06A5DAB18D3385E8AED5D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CreateRoom_m12D48FA7E2BFA9460038A06A7461B5D32404DD28 (String_t* ___roomName0, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___roomOptions1, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___typedLobby2, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___expectedUsers3, const RuntimeMethod* method) ;
 // UnityEngine.GameObject UnityEngine.GameObject::get_gameObject()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
+// System.Void SpherePlayerNetworkSetup::UpdateHealthUI()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_UpdateHealthUI_mF9A32C48A90E61E8CBEFE00CF211EE7EDEA83C4A (SpherePlayerNetworkSetup_t2307CD89B2FF5403FE0EEE333AEC3477F6AC30DE* __this, const RuntimeMethod* method) ;
 // Photon.Pun.PhotonView Photon.Pun.MonoBehaviourPun::get_photonView()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* MonoBehaviourPun_get_photonView_m0DBC40909E2E885D7FA3D40157A189FADEE98A67 (MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::AddComponent<UnityEngine.AudioListener>()
@@ -8308,8 +8310,6 @@ inline AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* GameObject_AddCo
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_SetLayerRecursively_m614CEFCCEFB08E7449156C4BC3049BD1BF80D3D7 (SpherePlayerNetworkSetup_t2307CD89B2FF5403FE0EEE333AEC3477F6AC30DE* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___go0, int32_t ___layerNumber1, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.GameObject::get_active()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_active_mAADB8845313470CFA8C2A937543D0B004E035BA5 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-// System.Void SpherePlayerNetworkSetup::UpdateHealthUI()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_UpdateHealthUI_mF9A32C48A90E61E8CBEFE00CF211EE7EDEA83C4A (SpherePlayerNetworkSetup_t2307CD89B2FF5403FE0EEE333AEC3477F6AC30DE* __this, const RuntimeMethod* method) ;
 // System.Void SpherePlayerNetworkSetup::DestroyHealthUI()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_DestroyHealthUI_mBDAFC6794F476F5F052216077B04FCDE07DD6411 (SpherePlayerNetworkSetup_t2307CD89B2FF5403FE0EEE333AEC3477F6AC30DE* __this, const RuntimeMethod* method) ;
 // System.Void SpherePlayerNetworkSetup::Die()
@@ -16900,7 +16900,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enemy_LoseHealth_m4B8DE532A75CFA04B3699F
 	{
 		// UpdateHealthUI();
 		Enemy_UpdateHealthUI_m524DB7B561CC46B7AECB3D966CDD051AF86250E8(__this, NULL);
-		goto IL_006a;
+		goto IL_0071;
 	}
 
 IL_0027:
@@ -16924,13 +16924,15 @@ IL_0027:
 		L_10 = Component_GetComponent_TisFollowObject_t43FC8337CA547B31B5A583FE5BC755D834C922AA_mDC90C4FC4605FE5DE43FAD156E8F5F885DC18011(__this, Component_GetComponent_TisFollowObject_t43FC8337CA547B31B5A583FE5BC755D834C922AA_mDC90C4FC4605FE5DE43FAD156E8F5F885DC18011_RuntimeMethod_var);
 		NullCheck(L_10);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_10, (bool)0, NULL);
+		// isWalking = false;
+		__this->___isWalking_6 = (bool)0;
 		// DestroyHealthUI();
 		Enemy_DestroyHealthUI_m540068A7D93A40369638624144E3404243FD4C60(__this, NULL);
 		// Die();
 		Enemy_Die_mE3035165EFABE5FD2A294473FB427DB5737B89EB(__this, NULL);
 	}
 
-IL_006a:
+IL_0071:
 	{
 		// }
 		return;
@@ -17261,10 +17263,10 @@ IL_0016:
 IL_0018:
 	{
 		__this->___U3CU3E1__state_0 = (-1);
-		// yield return new WaitForSeconds(1f);
+		// yield return new WaitForSeconds(2f);
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		NullCheck(L_3);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (1.0f), NULL);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (2.0f), NULL);
 		__this->___U3CU3E2__current_1 = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_3);
 		__this->___U3CU3E1__state_0 = 1;
@@ -21609,6 +21611,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_Start_m0503A582
 		L_1 = GameObject_get_gameObject_m0878015B8CF7F5D432B583C187725810D27B57DC(L_0, NULL);
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
+		// UpdateHealthUI();
+		SpherePlayerNetworkSetup_UpdateHealthUI_mF9A32C48A90E61E8CBEFE00CF211EE7EDEA83C4A(__this, NULL);
 		// if(photonView.IsMine)
 		PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* L_2;
 		L_2 = MonoBehaviourPun_get_photonView_m0DBC40909E2E885D7FA3D40157A189FADEE98A67(__this, NULL);
@@ -21619,7 +21623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_Start_m0503A582
 		bool L_4 = V_0;
 		if (!L_4)
 		{
-			goto IL_0203;
+			goto IL_020a;
 		}
 	}
 	{
@@ -21632,7 +21636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_Start_m0503A582
 		bool L_7 = V_2;
 		if (!L_7)
 		{
-			goto IL_013e;
+			goto IL_0145;
 		}
 	}
 	{
@@ -21714,10 +21718,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpherePlayerNetworkSetup_Start_m0503A582
 		CameraMouseMovement_t7FCA25C23ADB9A74EB8E810ACB452AFAFDE7CFFF* L_31 = __this->___cameraMouseMovement_23;
 		NullCheck(L_31);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_31, (bool)1, NULL);
-		goto IL_0190;
+		goto IL_0197;
 	}
 
-IL_013e:
+IL_0145:
 	{
 		// LocalXRRigGameobject.SetActive(true);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = __this->___LocalXRRigGameobject_5;
@@ -21748,7 +21752,7 @@ IL_013e:
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_39, (bool)0, NULL);
 	}
 
-IL_0190:
+IL_0197:
 	{
 		// if(PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue(MultiplayerVRConstants.AVATAR_SELECTION_NUMBER, out avatarSelectionNumber))
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
@@ -21764,7 +21768,7 @@ IL_0190:
 		bool L_43 = V_3;
 		if (!L_43)
 		{
-			goto IL_01f1;
+			goto IL_01f8;
 		}
 	}
 	{
@@ -21791,7 +21795,7 @@ IL_0190:
 		PhotonView_RPC_mD406BD732C9B9AFD46C149F63514AB3A923EB5BB(L_47, _stringLiteral23978260003A2DB4C0CB5E1E2717CA0978DFDDD7, 3, L_49, NULL);
 	}
 
-IL_01f1:
+IL_01f8:
 	{
 		// gameObject.AddComponent<AudioListener>();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53;
@@ -21799,10 +21803,10 @@ IL_01f1:
 		NullCheck(L_53);
 		AudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35* L_54;
 		L_54 = GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E(L_53, GameObject_AddComponent_TisAudioListener_t1D629CE9BC079C8ECDE8F822616E8A8E319EAE35_mA30AC51FE6287A9D0057077D99F694600A3D844E_RuntimeMethod_var);
-		goto IL_031d;
+		goto IL_0324;
 	}
 
-IL_0203:
+IL_020a:
 	{
 		// if(CurrentPlatformManager.instance.IsOnQuest())
 		CurrentPlatformManager_tDC42F5C6E6F59F20D2D3AC32B77DE6DFF00676C2* L_55 = ((CurrentPlatformManager_tDC42F5C6E6F59F20D2D3AC32B77DE6DFF00676C2_StaticFields*)il2cpp_codegen_static_fields_for(CurrentPlatformManager_tDC42F5C6E6F59F20D2D3AC32B77DE6DFF00676C2_il2cpp_TypeInfo_var))->___instance_4;
@@ -21813,14 +21817,14 @@ IL_0203:
 		bool L_57 = V_5;
 		if (!L_57)
 		{
-			goto IL_021b;
+			goto IL_0222;
 		}
 	}
 	{
-		goto IL_029f;
+		goto IL_02a6;
 	}
 
-IL_021b:
+IL_0222:
 	{
 		// LocalXRRigGameobject.SetActive(false);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = __this->___LocalXRRigGameobject_5;
@@ -21866,7 +21870,7 @@ IL_021b:
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_67, L_72, NULL);
 	}
 
-IL_029f:
+IL_02a6:
 	{
 		// AvatarLeftHandGameObject.transform.SetParent(mainCamera.transform);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_73 = __this->___AvatarLeftHandGameObject_9;
@@ -21911,7 +21915,7 @@ IL_029f:
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_85, (bool)0, NULL);
 	}
 
-IL_031d:
+IL_0324:
 	{
 		// }
 		return;

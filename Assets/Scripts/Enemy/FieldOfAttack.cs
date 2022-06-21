@@ -11,7 +11,7 @@ public class FieldOfAttack : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         //print("Attack:" + col.name);
-        if(col.name.Contains("Player"))
+        if(col.name.Contains("Avatar"))
         {
            enemy.AttackPlayer(col.gameObject);
         }

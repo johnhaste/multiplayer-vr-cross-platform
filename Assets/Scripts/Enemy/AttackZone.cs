@@ -8,9 +8,9 @@ public class AttackZone : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         print("Attack Detector:" + col.name);
-        if(col.name.Contains("Player"))
+        if(col.name.Contains("Avatar"))
         {
-            col.GetComponent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer,1);
+            col.GetComponentInParent<PhotonView>().RPC("LoseHealth", RpcTarget.AllBufferedViaServer,1);
         }
     }
 }

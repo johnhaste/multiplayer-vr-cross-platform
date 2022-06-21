@@ -135,7 +135,7 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
         {
             StartCoroutine("BlinkRedCanvas");
 
-            if(health > 0)
+            if(health > 1)
             {    
                 health -= damage;
                 UpdateHealthUI();
@@ -221,17 +221,16 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     {
         health = 0;
         MainAvatarGameObject.transform.rotation =  Quaternion.Euler(90f,0f,90f);
-        LocalXRRigGameobject.SetActive(false);
-        pCMoveProvider.enabled = false;
         StartCoroutine("WaitAndDie"); 
     }
 
     IEnumerator WaitAndDie()
     {
         //Disable Movement
+        print("Wait and die");
         pCMoveProvider.enabled = false;
         cameraMouseMovement.enabled = false;
-        LocalXRRigGameobject.SetActive(false);
+        //LocalXRRigGameobject.SetActive(false);
 
         //Canvas
         canvasBlackRestart.SetActive(true);

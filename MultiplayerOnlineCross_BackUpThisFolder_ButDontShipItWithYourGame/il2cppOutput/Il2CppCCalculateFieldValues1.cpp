@@ -47195,21 +47195,21 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5550[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5551[1] = 
 {
 	static_cast<int32_t>(offsetof(PowerUp_tE7C54110BB5FC1180B11E810D59F8AA32123F232, ___pickupEffect_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5553[9] = 
-{
-	static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___alwaysShowKeyboard_4)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___keyboard_5)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___localVRPlayerCamera_6)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___relativePosition_7)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___playerNameInputField_8)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___leftMarret_9)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___rightMarret_10)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___leftBaseController_11)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___rightBaseController_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5554[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5553[4] = 
 {
 	static_cast<int32_t>(offsetof(ZombieCameraLogic_t1C067C390B969AE1496B1A758A48206817CF6C39, ___m_target_4)),static_cast<int32_t>(offsetof(ZombieCameraLogic_t1C067C390B969AE1496B1A758A48206817CF6C39, ___m_distance_5)),static_cast<int32_t>(offsetof(ZombieCameraLogic_t1C067C390B969AE1496B1A758A48206817CF6C39, ___m_height_6)),static_cast<int32_t>(offsetof(ZombieCameraLogic_t1C067C390B969AE1496B1A758A48206817CF6C39, ___m_lookAtAroundAngle_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5555[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5554[3] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5556[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5555[9] = 
 {
 	static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_moveSpeed_4)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_turnSpeed_5)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_animator_6)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_rigidBody_7)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_controlMode_8)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_currentV_9)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_currentH_10)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_interpolation_11)),static_cast<int32_t>(offsetof(ZombieCharacterControl_tDC90B289FA1E1F8CB29C1D3CEBF1DA3AFB68FF51, ___m_currentDirection_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5557[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5556[3] = 
 {
 	static_cast<int32_t>(offsetof(ZombieFree_tB244696275184690FC33870F487A1005062C1E73, ___m_animations_4)),static_cast<int32_t>(offsetof(ZombieFree_tB244696275184690FC33870F487A1005062C1E73, ___m_animators_5)),static_cast<int32_t>(offsetof(ZombieFree_tB244696275184690FC33870F487A1005062C1E73, ___m_cameraLogic_6)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5557[9] = 
+{
+	static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___alwaysShowKeyboard_4)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___keyboard_5)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___localVRPlayerCamera_6)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___relativePosition_7)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___playerNameInputField_8)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___leftMarret_9)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___rightMarret_10)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___leftBaseController_11)),static_cast<int32_t>(offsetof(VRKeyboardManager_t11307D6BA90CDA5EFAA798969F6CE01BF37165BB, ___rightBaseController_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5562[1] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass41_0_tD03998B72130E379210125F837D005B365C1708B, ___handler_0)),};

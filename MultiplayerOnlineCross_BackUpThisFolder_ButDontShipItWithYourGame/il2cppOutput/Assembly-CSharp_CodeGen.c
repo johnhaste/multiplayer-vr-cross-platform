@@ -28,48 +28,48 @@ extern void Quit_Start_m033A99F763D22B87236EB23E02243834B9CCF280 (void);
 extern void Quit_Update_m0ACBFC7352DC28E4E3F0FD0CB563C8E717681F9B (void);
 // 0x00000008 System.Void Quit::.ctor()
 extern void Quit__ctor_m3F91DC1CD69CEDC58473E2984694380137C228C0 (void);
-// 0x00000009 System.Void VRKeyboardManager::EnableVRKeyboard()
-extern void VRKeyboardManager_EnableVRKeyboard_mE2C18B5EC86E66C08D4A809910A00E697854121B (void);
-// 0x0000000A System.Void VRKeyboardManager::AttachMarrets()
-extern void VRKeyboardManager_AttachMarrets_mEB834961CC999295EB3CD2516EC71F27E121B619 (void);
-// 0x0000000B System.Void VRKeyboardManager::DetachMarrets()
-extern void VRKeyboardManager_DetachMarrets_m44E1C2E7160887970203A85CBF064D022ACB7DD0 (void);
-// 0x0000000C System.Void VRKeyboardManager::DisableVRKeyboard()
-extern void VRKeyboardManager_DisableVRKeyboard_m0F5D96F5C8B2AC6B2622DF32EE7C681F6DEEBC20 (void);
-// 0x0000000D System.Void VRKeyboardManager::Update()
-extern void VRKeyboardManager_Update_m0A336C3941600751BAC3BBAF20B6311DFB4C499B (void);
-// 0x0000000E System.Void VRKeyboardManager::HandleUpdate(System.String)
-extern void VRKeyboardManager_HandleUpdate_m2600DD7A4BD419208666F1040C7C7654E79BF9A7 (void);
-// 0x0000000F System.Void VRKeyboardManager::HandleSubmit(System.String)
-extern void VRKeyboardManager_HandleSubmit_m0154CFFC9EFD7E5F056AC0175FBD59DFAF7C7DD8 (void);
-// 0x00000010 System.Void VRKeyboardManager::HandleCancel()
-extern void VRKeyboardManager_HandleCancel_mA4906466A5ACA902EA72635B852B375D91253436 (void);
-// 0x00000011 System.Void VRKeyboardManager::OnSelectEnter()
-extern void VRKeyboardManager_OnSelectEnter_m7C6C5B8A426E5917A44E2CF1D06C71BCEFD02477 (void);
-// 0x00000012 System.Void VRKeyboardManager::OnSelectExit()
-extern void VRKeyboardManager_OnSelectExit_m973D56826467F4EA45244388155BF52B65B9AF15 (void);
-// 0x00000013 System.Void VRKeyboardManager::.ctor()
-extern void VRKeyboardManager__ctor_m22D58B3B0A0CEB77224023E970CB3BEFD8BDF44F (void);
-// 0x00000014 System.Void ZombieCameraLogic::LateUpdate()
+// 0x00000009 System.Void ZombieCameraLogic::LateUpdate()
 extern void ZombieCameraLogic_LateUpdate_m89B5A6874FFA2C2775DF64752654D8763B678DD9 (void);
-// 0x00000015 System.Void ZombieCameraLogic::.ctor()
+// 0x0000000A System.Void ZombieCameraLogic::.ctor()
 extern void ZombieCameraLogic__ctor_m5327502C107049BA25BE7D16EA52B2A395488EE0 (void);
-// 0x00000016 System.Void ZombieCharacterControl::Awake()
+// 0x0000000B System.Void ZombieCharacterControl::Awake()
 extern void ZombieCharacterControl_Awake_m5F26BA2F2EDE952F742CDEB338286608D1D108AE (void);
-// 0x00000017 System.Void ZombieCharacterControl::FixedUpdate()
+// 0x0000000C System.Void ZombieCharacterControl::FixedUpdate()
 extern void ZombieCharacterControl_FixedUpdate_mA802706F5079E0808E76B59612EB91711F1855B8 (void);
-// 0x00000018 System.Void ZombieCharacterControl::TankUpdate()
+// 0x0000000D System.Void ZombieCharacterControl::TankUpdate()
 extern void ZombieCharacterControl_TankUpdate_m335469A3CD6BF2AA5A757D1F9B799660017784F2 (void);
-// 0x00000019 System.Void ZombieCharacterControl::DirectUpdate()
+// 0x0000000E System.Void ZombieCharacterControl::DirectUpdate()
 extern void ZombieCharacterControl_DirectUpdate_mC9F5DF455F99F5186E6C97EB7048A8C17FDC8106 (void);
-// 0x0000001A System.Void ZombieCharacterControl::.ctor()
+// 0x0000000F System.Void ZombieCharacterControl::.ctor()
 extern void ZombieCharacterControl__ctor_m59D47DC85E0EBCBA683E42C248430CE3666F168F (void);
-// 0x0000001B System.Void ZombieFree::Start()
+// 0x00000010 System.Void ZombieFree::Start()
 extern void ZombieFree_Start_m6AE379A21237950D7DF9D8B11A8CC2642563A2D6 (void);
-// 0x0000001C System.Void ZombieFree::OnGUI()
+// 0x00000011 System.Void ZombieFree::OnGUI()
 extern void ZombieFree_OnGUI_mCC097FAD4BB3BFE39ABD1B0F4C873338ABC27407 (void);
-// 0x0000001D System.Void ZombieFree::.ctor()
+// 0x00000012 System.Void ZombieFree::.ctor()
 extern void ZombieFree__ctor_mD5AF46F5DA4776A2F29E574952A753428EB6608C (void);
+// 0x00000013 System.Void VRKeyboardManager::EnableVRKeyboard()
+extern void VRKeyboardManager_EnableVRKeyboard_mE2C18B5EC86E66C08D4A809910A00E697854121B (void);
+// 0x00000014 System.Void VRKeyboardManager::AttachMarrets()
+extern void VRKeyboardManager_AttachMarrets_mEB834961CC999295EB3CD2516EC71F27E121B619 (void);
+// 0x00000015 System.Void VRKeyboardManager::DetachMarrets()
+extern void VRKeyboardManager_DetachMarrets_m44E1C2E7160887970203A85CBF064D022ACB7DD0 (void);
+// 0x00000016 System.Void VRKeyboardManager::DisableVRKeyboard()
+extern void VRKeyboardManager_DisableVRKeyboard_m0F5D96F5C8B2AC6B2622DF32EE7C681F6DEEBC20 (void);
+// 0x00000017 System.Void VRKeyboardManager::Update()
+extern void VRKeyboardManager_Update_m0A336C3941600751BAC3BBAF20B6311DFB4C499B (void);
+// 0x00000018 System.Void VRKeyboardManager::HandleUpdate(System.String)
+extern void VRKeyboardManager_HandleUpdate_m2600DD7A4BD419208666F1040C7C7654E79BF9A7 (void);
+// 0x00000019 System.Void VRKeyboardManager::HandleSubmit(System.String)
+extern void VRKeyboardManager_HandleSubmit_m0154CFFC9EFD7E5F056AC0175FBD59DFAF7C7DD8 (void);
+// 0x0000001A System.Void VRKeyboardManager::HandleCancel()
+extern void VRKeyboardManager_HandleCancel_mA4906466A5ACA902EA72635B852B375D91253436 (void);
+// 0x0000001B System.Void VRKeyboardManager::OnSelectEnter()
+extern void VRKeyboardManager_OnSelectEnter_m7C6C5B8A426E5917A44E2CF1D06C71BCEFD02477 (void);
+// 0x0000001C System.Void VRKeyboardManager::OnSelectExit()
+extern void VRKeyboardManager_OnSelectExit_m973D56826467F4EA45244388155BF52B65B9AF15 (void);
+// 0x0000001D System.Void VRKeyboardManager::.ctor()
+extern void VRKeyboardManager__ctor_m22D58B3B0A0CEB77224023E970CB3BEFD8BDF44F (void);
 // 0x0000001E System.Void DebugUIBuilder::Awake()
 extern void DebugUIBuilder_Awake_m0BA3E2D1D9093B1F9AAEE4BE803B7AC4E590A655 (void);
 // 0x0000001F System.Void DebugUIBuilder::Show()
@@ -4195,6 +4195,16 @@ static Il2CppMethodPointer s_methodPointers[2113] =
 	Quit_Start_m033A99F763D22B87236EB23E02243834B9CCF280,
 	Quit_Update_m0ACBFC7352DC28E4E3F0FD0CB563C8E717681F9B,
 	Quit__ctor_m3F91DC1CD69CEDC58473E2984694380137C228C0,
+	ZombieCameraLogic_LateUpdate_m89B5A6874FFA2C2775DF64752654D8763B678DD9,
+	ZombieCameraLogic__ctor_m5327502C107049BA25BE7D16EA52B2A395488EE0,
+	ZombieCharacterControl_Awake_m5F26BA2F2EDE952F742CDEB338286608D1D108AE,
+	ZombieCharacterControl_FixedUpdate_mA802706F5079E0808E76B59612EB91711F1855B8,
+	ZombieCharacterControl_TankUpdate_m335469A3CD6BF2AA5A757D1F9B799660017784F2,
+	ZombieCharacterControl_DirectUpdate_mC9F5DF455F99F5186E6C97EB7048A8C17FDC8106,
+	ZombieCharacterControl__ctor_m59D47DC85E0EBCBA683E42C248430CE3666F168F,
+	ZombieFree_Start_m6AE379A21237950D7DF9D8B11A8CC2642563A2D6,
+	ZombieFree_OnGUI_mCC097FAD4BB3BFE39ABD1B0F4C873338ABC27407,
+	ZombieFree__ctor_mD5AF46F5DA4776A2F29E574952A753428EB6608C,
 	VRKeyboardManager_EnableVRKeyboard_mE2C18B5EC86E66C08D4A809910A00E697854121B,
 	VRKeyboardManager_AttachMarrets_mEB834961CC999295EB3CD2516EC71F27E121B619,
 	VRKeyboardManager_DetachMarrets_m44E1C2E7160887970203A85CBF064D022ACB7DD0,
@@ -4206,16 +4216,6 @@ static Il2CppMethodPointer s_methodPointers[2113] =
 	VRKeyboardManager_OnSelectEnter_m7C6C5B8A426E5917A44E2CF1D06C71BCEFD02477,
 	VRKeyboardManager_OnSelectExit_m973D56826467F4EA45244388155BF52B65B9AF15,
 	VRKeyboardManager__ctor_m22D58B3B0A0CEB77224023E970CB3BEFD8BDF44F,
-	ZombieCameraLogic_LateUpdate_m89B5A6874FFA2C2775DF64752654D8763B678DD9,
-	ZombieCameraLogic__ctor_m5327502C107049BA25BE7D16EA52B2A395488EE0,
-	ZombieCharacterControl_Awake_m5F26BA2F2EDE952F742CDEB338286608D1D108AE,
-	ZombieCharacterControl_FixedUpdate_mA802706F5079E0808E76B59612EB91711F1855B8,
-	ZombieCharacterControl_TankUpdate_m335469A3CD6BF2AA5A757D1F9B799660017784F2,
-	ZombieCharacterControl_DirectUpdate_mC9F5DF455F99F5186E6C97EB7048A8C17FDC8106,
-	ZombieCharacterControl__ctor_m59D47DC85E0EBCBA683E42C248430CE3666F168F,
-	ZombieFree_Start_m6AE379A21237950D7DF9D8B11A8CC2642563A2D6,
-	ZombieFree_OnGUI_mCC097FAD4BB3BFE39ABD1B0F4C873338ABC27407,
-	ZombieFree__ctor_mD5AF46F5DA4776A2F29E574952A753428EB6608C,
 	DebugUIBuilder_Awake_m0BA3E2D1D9093B1F9AAEE4BE803B7AC4E590A655,
 	DebugUIBuilder_Show_mC497EDD3C65CD45F75CB8E5EBBF09FD2C114762B,
 	DebugUIBuilder_Hide_mF366B8F84533FB83A4C33F0F67D6B0CF3E24398D,
@@ -6327,18 +6327,18 @@ static const int32_t s_InvokerIndices[2113] =
 	6783,
 	6783,
 	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
+	6783,
 	5412,
 	5412,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
-	6783,
 	6783,
 	6783,
 	6783,

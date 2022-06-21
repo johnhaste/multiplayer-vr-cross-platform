@@ -104,6 +104,7 @@ public class Enemy : MonoBehaviour, IPunObservable
 
     public void AttackPlayer(GameObject player)
     {
+        print("Attack" + player.name);
 
         if(!isAttacking)
         {
@@ -126,7 +127,7 @@ public class Enemy : MonoBehaviour, IPunObservable
         yield return new WaitForSeconds(2f);
 
         //If it's close to the player, attacks again
-        if(ComparePositions.IsClose(gameObject, player, 3f) && player.GetComponent<SpherePlayerNetworkSetup>().health > 0)
+        if(ComparePositions.IsClose(gameObject, player, 3f) && player.transform.GetParentComponent<SpherePlayerNetworkSetup>().health > 0)
         {
             isAttacking = false;
             AttackPlayer(player);

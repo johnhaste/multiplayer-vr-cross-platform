@@ -9,7 +9,7 @@ public class FieldOfView : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         //print("Collided:" + col.name);
-        if(col.name.Contains("Player"))
+        if(col.name.Contains("Avatar"))
         {
            followObject.ChangeTarget(col.gameObject); 
         }
