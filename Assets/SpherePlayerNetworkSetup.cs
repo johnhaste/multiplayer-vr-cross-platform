@@ -26,6 +26,10 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
     public TextMeshProUGUI healthText;
     public GameObject canvasRedBlink;
 
+    //Restart Black UI
+    public GameObject canvasBlackRestart;
+    public TextMeshProUGUI restartCountdownText;
+
     //Grab Detector
     public GameObject grabDetector;
 
@@ -223,8 +227,20 @@ public class SpherePlayerNetworkSetup : MonoBehaviourPunCallbacks, IPunObservabl
 
     IEnumerator WaitAndDie()
     {
-        yield return new WaitForSeconds(2f);
-        //PhotonNetwork.LoadLevel("HomeScene");
+        //Disable Movement
+        pCMoveProvider.enabled = false;
+        cameraMouseMovement.enabled = false;
+        LocalXRRigGameobject.SetActive(false);
+
+        //Canvas
+        canvasBlackRestart.SetActive(true);
+        restartCountdownText.text = 3+"";
+        yield return new WaitForSeconds(1f);
+        restartCountdownText.text = 2+"";
+        yield return new WaitForSeconds(1f);
+        restartCountdownText.text = 1+"";
+        yield return new WaitForSeconds(1f);
+        PhotonNetwork.LoadLevel("HomeScene");
     }
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
