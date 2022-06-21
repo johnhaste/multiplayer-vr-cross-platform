@@ -28,11 +28,11 @@ public class UI_InteractionController : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActionReference_UISwitcher.action.performed += ActivateUIMode;
+        //inputActionReference_UISwitcher.action.performed += ActivateUIMode;
     }
     private void OnDisable()
     {
-        inputActionReference_UISwitcher.action.performed -= ActivateUIMode;
+        //inputActionReference_UISwitcher.action.performed -= ActivateUIMode;
     }
 
     private void Start()

@@ -685,8 +685,6 @@ struct Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712;
 struct SelectivePassthroughExperience_t84E3D92EBFC4E0E85C43ED4F488E29F19DE72C6B;
 // SpatialAnchorSession
 struct SpatialAnchorSession_t872C244CE432B1802E5F3D18AB1AC8ADEB7A9B70;
-// SpawnerManager
-struct SpawnerManager_tC45F726DA2CB29A6C511FAF4C51A21E3833F29BF;
 // Photon.Voice.Unity.Speaker
 struct Speaker_tBD124E6AEFF169667A9441881B3A98F122AE4ADE;
 // SpherePlayerNetworkSetup
@@ -878,6 +876,7 @@ IL2CPP_EXTERN_C RuntimeClass* DebugUIBuilder_tC18B19AE08445BA1378C7DABB0E4858217
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tA8859D04EEDE77A27EEA269116BBC6C087842B21_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tE1184E8D53864B83C43E4E0E93F8388CEE760D42_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* GrabbedObject_tA6B05BA3219A736CE99A71B4098441732453DFFA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var;
@@ -4683,6 +4682,19 @@ struct FollowObject_t43FC8337CA547B31B5A583FE5BC755D834C922AA  : public MonoBeha
 	float ___speed_6;
 };
 
+// GameStateManager
+struct GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// GameStateManager/gameState GameStateManager::currentGameState
+	int32_t ___currentGameState_5;
+};
+
+struct GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408_StaticFields
+{
+	// GameStateManager GameStateManager::instance
+	GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408* ___instance_4;
+};
+
 // GrabObject
 struct GrabObject_t130848A98FEF2A2803328956DEE21A3DD4AF4E9A  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -5208,15 +5220,6 @@ struct SelectivePassthroughExperience_t84E3D92EBFC4E0E85C43ED4F488E29F19DE72C6B 
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___leftMaskObject_4;
 	// UnityEngine.GameObject SelectivePassthroughExperience::rightMaskObject
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rightMaskObject_5;
-};
-
-// SpawnerManager
-struct SpawnerManager_tC45F726DA2CB29A6C511FAF4C51A21E3833F29BF  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// UnityEngine.GameObject SpawnerManager::GenericVRPlayerPrefab
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___GenericVRPlayerPrefab_4;
-	// UnityEngine.Vector3 SpawnerManager::spawnPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___spawnPosition_5;
 };
 
 // StartMenu
@@ -8646,6 +8649,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FollowObject_ChangeTarget_mF63229B22AEC3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EnemySpawner_CreateZombies_mF8AF44176B643997C12815950B410F73D56C51EA (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) ;
 // System.Void EnemySpawner/<CreateZombies>d__6::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCreateZombiesU3Ed__6__ctor_mA3D15020EB2CF6BE179A8D311024860392F22C55 (U3CCreateZombiesU3Ed__6_tFB8DAE8970C7F507FF1E44D84846C6FD8785A442* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.MonoBehaviour::StopAllCoroutines()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<UnityEngine.ParticleSystem>(T,UnityEngine.Vector3,UnityEngine.Quaternion)
 inline ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* Object_Instantiate_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_m272A307F5FB892FB3D1DD65E677507E4D39088D8 (ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* ___original0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation2, const RuntimeMethod* method)
 {
@@ -8880,8 +8885,6 @@ inline bool Enumerator_MoveNext_m31C52E9AD3265C4BCC34BF3C5846DA6D587FCB8F (Enume
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomOptions__ctor_m06A5DAB18D3385E8AED5DA84C8A89D9C7E8498F8 (RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* __this, const RuntimeMethod* method) ;
 // System.Boolean Photon.Pun.PhotonNetwork::CreateRoom(System.String,Photon.Realtime.RoomOptions,Photon.Realtime.TypedLobby,System.String[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CreateRoom_m12D48FA7E2BFA9460038A06A7461B5D32404DD28 (String_t* ___roomName0, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___roomOptions1, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___typedLobby2, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___expectedUsers3, const RuntimeMethod* method) ;
-// UnityEngine.GameObject Photon.Pun.PhotonNetwork::Instantiate(System.String,UnityEngine.Vector3,UnityEngine.Quaternion,System.Byte,System.Object[])
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_Instantiate_mDB16644B4DD135B74F606887D511E6BAD46634C6 (String_t* ___prefabName0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation2, uint8_t ___group3, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___data4, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::Normalize(UnityEngine.Vector3)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m6120F119433C5B60BBB28731D3D4A0DA50A84DDD_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___value0, const RuntimeMethod* method) ;
 // UnityEngine.Color UnityEngine.Color::HSVToRGB(System.Single,System.Single,System.Single,System.Boolean)
@@ -23098,6 +23101,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EnemySpawner_CreateZombies_mF8
 		return L_1;
 	}
 }
+// System.Void EnemySpawner::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_Update_m85D72B9CF6D0D9D7BE8A6816CE556BF5E9D7FFC5 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		// if(GameStateManager.instance.currentGameState == GameStateManager.gameState.ENDGAME)
+		GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408* L_0 = ((GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408_StaticFields*)il2cpp_codegen_static_fields_for(GameStateManager_t37996E8A9A45519288BDCCD867F18384DEB1E408_il2cpp_TypeInfo_var))->___instance_4;
+		NullCheck(L_0);
+		int32_t L_1 = L_0->___currentGameState_5;
+		V_0 = (bool)((((int32_t)L_1) == ((int32_t)2))? 1 : 0);
+		bool L_2 = V_0;
+		if (!L_2)
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		// StopAllCoroutines();
+		MonoBehaviour_StopAllCoroutines_m872033451D42013A99867D09337490017E9ED318(__this, NULL);
+	}
+
+IL_001b:
+	{
+		// }
+		return;
+	}
+}
 // System.Void EnemySpawner::SpawnZombie(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemySpawner_SpawnZombie_m76221D5360B989A312B1F832FE33F2377225C159 (EnemySpawner_tBA941A38B8AC67CF1D99E92E3BB0CC9C7A14A177* __this, int32_t ___indexCurrentSpawner0, const RuntimeMethod* method) 
 {
@@ -27476,69 +27512,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomManager__ctor_m1BA0462B8D59D0BD0F897
 {
 	{
 		MonoBehaviourPunCallbacks__ctor_m25DE2B188CA2481D58FBA9BB58CFBD65432B77E2(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void SpawnerManager::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnerManager_Start_mB3DB386F535510E60BFA9159484C8BCC4CE9EB89 (SpawnerManager_tC45F726DA2CB29A6C511FAF4C51A21E3833F29BF* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		// if(PhotonNetwork.IsConnectedAndReady)
-		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		bool L_0;
-		L_0 = PhotonNetwork_get_IsConnectedAndReady_m5BCD9680B6353BA0006AECC24FCD7AE9CA451A00(NULL);
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_002a;
-		}
-	}
-	{
-		// PhotonNetwork.Instantiate(GenericVRPlayerPrefab.name, spawnPosition, Quaternion.identity );
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___GenericVRPlayerPrefab_4;
-		NullCheck(L_2);
-		String_t* L_3;
-		L_3 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_2, NULL);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = __this->___spawnPosition_5;
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5;
-		L_5 = Quaternion_get_identity_mB9CAEEB21BC81352CBF32DB9664BFC06FA7EA27B_inline(NULL);
-		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
-		L_6 = PhotonNetwork_Instantiate_mDB16644B4DD135B74F606887D511E6BAD46634C6(L_3, L_4, L_5, (uint8_t)0, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL, NULL);
-	}
-
-IL_002a:
-	{
-		// }
-		return;
-	}
-}
-// System.Void SpawnerManager::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnerManager__ctor_m1A5D128B1DF9E27335B383E6D9D176DC8B946FF3 (SpawnerManager_tC45F726DA2CB29A6C511FAF4C51A21E3833F29BF* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Vector3 spawnPosition = new Vector3(0f,0f,0f);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
-		memset((&L_0), 0, sizeof(L_0));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_0), (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
-		__this->___spawnPosition_5 = L_0;
-		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
